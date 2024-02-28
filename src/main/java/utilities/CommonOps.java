@@ -5,32 +5,38 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.sql.Timestamp;
-import java.time.Duration;
 import java.util.Date;
+import java.util.logging.Level;
 
 public class CommonOps extends Base {
 
     // Initiate Parameters from Suite XML
-    @BeforeClass
-    @Parameters({ "BrowserName", "URL", "Timeout" })
-    // public void startSession(String BrowserName, String URL, Duration Timeout) {
-        public void startSession() {
-        // --- Init Params ---
-        browserName = "chrome";
-        url = "https://www.vicarius.io/sign/in";
-        timeout = Duration.ofSeconds(10);
+    // @BeforeClass
+    // @Parameters({ "BrowserName", "URL", "Timeout" })
+    // public void startSession(String BrowserName, String URL, String Timeout) {
+    // // --- Init Params ---
+    // browserName = BrowserName;
+    // url = URL;
+    // try {
+    // timeout = Duration.ofSeconds(Integer.parseInt(Timeout));
+    // } catch (NumberFormatException e) {
+    // System.out.println("Invalid integer input");
+    // }
 
-        initWeb();
-    }
+    // initWeb();
+    // }
 
     // Close session
     @AfterClass
@@ -41,6 +47,9 @@ public class CommonOps extends Base {
     // Start video recording before starting a test
     @BeforeMethod
     public void beforeMethod(Method method) {
+
+        driver.get(url);
+
         try {
             MonteScreenRecorder.startRecord(method.getName());
         } catch (Exception e) {
@@ -49,25 +58,28 @@ public class CommonOps extends Base {
     }
 
     // Initiate Browser, Navigate to URL, Actions & Wait
-    // Initiate Grafana Page Objects
     public static void initWeb() {
-        if (browserName.equalsIgnoreCase("chrome"))
-            driver = new ChromeDriver();
-        else if (browserName.equalsIgnoreCase("firefox"))
-            driver = new FirefoxDriver();
-        else if (browserName.equalsIgnoreCase("edge"))
-            driver = new EdgeDriver();
-        else
-            throw new RuntimeException("Invalid Browser Type");
 
+        ChromeOptions options = new ChromeOptions();
+        LoggingPreferences logPrefs = new LoggingPreferences();
+        logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
+        options.setCapability("goog:loggingPrefs", logPrefs);
+
+        if (browserName.equalsIgnoreCase("chrome")) {
+            driver = new ChromeDriver(options);
+        } else if (browserName.equalsIgnoreCase("firefox")) {
+            driver = new FirefoxDriver();
+        } else if (browserName.equalsIgnoreCase("edge")) {
+            driver = new EdgeDriver();
+        } else {
+            throw new RuntimeException("Invalid Browser Type");
+        }
         driver.manage().window().maximize();
         setDriverTimeoutAndWait();
-        driver.get(url);
+
         action = new Actions(driver);
 
-        System.out.println("URL: " + url);
-
-        ManagePages.initVicarius();
+        ManagePages.initVicariusPages();
     }
 
     // Take a screenshot for Allure report & save a png file

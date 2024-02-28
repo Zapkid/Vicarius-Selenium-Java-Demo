@@ -2,6 +2,7 @@ package utilities;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,6 +20,5 @@ public class Base {
     protected static pageObjects.SignInPage vicariusSignIn;
     protected static pageObjects.SignUpPage vicariusSignUp;
 
-
-
+    protected static Proxy seleniumProxy;
 }

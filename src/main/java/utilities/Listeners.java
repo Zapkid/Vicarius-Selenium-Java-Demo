@@ -26,32 +26,30 @@ public class Listeners extends CommonOps implements ITestListener {
     public void onTestSuccess(ITestResult test) {
         System.out.println("----------- Test:" + test.getName() + " Passed -------------");
 
-            try { 
-                MonteScreenRecorder.stopRecord();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        try {
+            MonteScreenRecorder.stopRecord();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-            
-            File file = new File("./test-recordings/" + test.getName() + ".avi");
-            if(file.delete())
-                System.out.println("Test recording Deleted Successfully");
-            else
-                System.out.println("Failed to Delete File");
-    
+        File file = new File("./test-recordings/" + test.getName() + ".avi");
+        if (file.delete())
+            System.out.println("Test recording Deleted Successfully");
+        else
+            System.out.println("Failed to Delete File");
+
     }
-
 
     public void onTestFailure(ITestResult test) {
         System.out.println("----------- Test:" + test.getName() + " Failed -------------");
 
-            try {
-                MonteScreenRecorder.stopRecord();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            saveScreenshot("Failed", "png");
-        
+        try {
+            MonteScreenRecorder.stopRecord();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        saveScreenshot("Failed", "png");
+
     }
 
 }

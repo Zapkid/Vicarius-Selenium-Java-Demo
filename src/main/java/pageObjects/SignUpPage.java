@@ -14,7 +14,6 @@ public class SignUpPage extends SignBase {
         return first_name_input;
     }
 
-    
     @FindBy(css = "[id='input29']")
     private WebElement last_name_input;
 

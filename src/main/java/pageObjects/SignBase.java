@@ -41,6 +41,14 @@ public class SignBase {
         return featuresHeaders;
     }
 
+    @FindBy(css = ".features li p")
+    private List<WebElement> featuresTexts;
+
+    @Step("Get Features text elements")
+    public List<WebElement> getFeaturesTexts() {
+        return featuresTexts;
+    }
+
     @FindBy(css = "button[type='submit']")
     private WebElement submitButton;
 
@@ -48,4 +56,13 @@ public class SignBase {
     public WebElement getSubmitButton() {
         return submitButton;
     }
+
+    @FindBy(css = ".content .heading")
+    private WebElement contentHeading;
+
+    @Step("Get Content heading element")
+    public WebElement getContentHeading() {
+        return contentHeading;
+    }
+
 }

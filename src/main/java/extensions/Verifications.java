@@ -1,11 +1,17 @@
 package extensions;
 
 import io.qameta.allure.Step;
+import utilities.CommonOps;
+
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-import utilities.CommonOps;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.List;
 
@@ -41,6 +47,29 @@ public class Verifications extends CommonOps {
             wait.until(ExpectedConditions.visibilityOf(element));
         }
         assertEquals(elements.size(), expected);
+    }
+
+    @Step("Verify Response status code")
+     public static void verifyResponseStatus(String Url, String statusCode) {
+        LogEntries les = driver.manage().logs().get(LogType.PERFORMANCE);
+        for (LogEntry le : les) {
+            if (le.getMessage().contains(Url)
+                    && le.getMessage().contains("status")) {
+                try {
+                    // Parse the JSON string
+                    ObjectMapper objectMapper = new ObjectMapper();
+                    JsonNode jsonNode = objectMapper.readTree(le.getMessage());
+
+                    // Navigate through the JSON structure to extract the desired value
+                    String status = jsonNode.path("message").path("params").path("response").path("status").asText();
+
+                    Verifications.verifyString(status, statusCode);
+                    break;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
 }
