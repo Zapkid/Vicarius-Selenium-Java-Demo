@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-27T18:49:03 IST" name="Surefire suite" finished-at="2024-02-27T18:49:04 IST" duration-ms="141">
+    <groups>
+    </groups>
+    <test started-at="2024-02-27T18:49:03 IST" name="Surefire test" finished-at="2024-02-27T18:49:04 IST" duration-ms="141">
+      <class name="vicarius.AppTest">
+        <test-method signature="shouldVisitPage()[pri:0, instance:vicarius.AppTest@306cf3ea]" started-at="2024-02-27T18:49:03 IST" name="shouldVisitPage" finished-at="2024-02-27T18:49:04 IST" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldVisitPage -->
+      </class> <!-- vicarius.AppTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
