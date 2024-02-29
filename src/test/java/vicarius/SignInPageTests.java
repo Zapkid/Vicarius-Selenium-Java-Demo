@@ -39,6 +39,9 @@ public class SignInPageTests extends CommonOps {
                 Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
                                 "If the email address exists and is active, further instructions have been sent to your email address.");
 
+                // Verify login button disabled
+                Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), false);
+
                 // Verify sign in API response
                 Verifications.verifyApiResponse("https://www.vicarius.io/api/v2/forms/signin", "200");
                 // TODO - Complete test flow using Gmail API - needs email credentials
@@ -135,6 +138,9 @@ public class SignInPageTests extends CommonOps {
                 Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
                                 "If the email address exists and is active, further instructions have been sent to your email address.");
 
+                // Verify login button disabled
+                Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), false);
+
                 // Verify sign in API response
                 Verifications.verifyApiResponse("https://www.vicarius.io/api/v2/forms/signin", "400",
                                 "Invalid email address");
@@ -154,6 +160,9 @@ public class SignInPageTests extends CommonOps {
                                 "Validation failed");
                 Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
                                 "Please, verify if all fields are correctly filled.");
+
+                // Verify login button enabled
+                Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), true);
 
                 // TODO - Add test to verify notification disappears on its own
                 // Verify notification closes on close
@@ -185,6 +194,9 @@ public class SignInPageTests extends CommonOps {
                                 "Validation failed");
                 Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
                                 "Please, verify if all fields are correctly filled.");
+
+                // Verify login button enabled
+                Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), true);
 
                 // TODO - Add test to verify notification disappears on its own
                 // Verify notification closes on close

@@ -1,6 +1,6 @@
 
-<p style="text-align: center"><img src="assets/Vicarius%20logo.png"></p>
-<h1 style="text-align: center;">Vicarius.io Selenium Java Testing Demo</h1>
+![Vicarius](assets/Vicarius%20logo.png "Vicarius Product")
+# Vicarius.io Selenium Java Testing Demo
 
 ## Introduction
 This project uses Selenium with the TestNG framework in a Page Object Model (POM) design pattern. The project tests the UI, functionality and network traffic associated with user actions of the vicarius.io website.
