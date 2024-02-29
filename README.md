@@ -5,8 +5,6 @@
 ## Introduction
 This project uses Selenium with the TestNG framework in a Page Object Model (POM) design pattern. The project tests the UI, functionality and network traffic associated with user actions of the vicarius.io website.
 
-![Vicarius](assets/Vicarius%20product.png "Vicarius Product")
-
 ## Setup
 1. **Prerequisites**: Ensure you have Java & Maven properly installed on your machine.
 2. **Clone the repository**: Clone this repository to your local machine.
