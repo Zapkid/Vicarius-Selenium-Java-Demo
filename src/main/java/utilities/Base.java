@@ -19,6 +19,7 @@ public class Base {
 
     protected static pageObjects.SignInPage vicariusSignIn;
     protected static pageObjects.SignUpPage vicariusSignUp;
+    protected static pageObjects.ProductPage vicariusProduct;
 
     protected static Proxy seleniumProxy;
 }

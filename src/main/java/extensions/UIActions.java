@@ -14,6 +14,13 @@ public class UIActions extends CommonOps {
         elem.click();
     }
 
+    @Step("Wait for element click-ability, then Click on Element & sleep")
+    public static void click(WebElement elem, long sleepTimeMillis) {
+        wait.until(ExpectedConditions.elementToBeClickable(elem));
+        elem.click();
+        sleep(sleepTimeMillis);
+    }
+
     @Step("No wait Click on element")
     public static void noWaitClick(WebElement elem) {
         elem.click();
@@ -40,13 +47,13 @@ public class UIActions extends CommonOps {
         }
     }
 
-    @Step("No wait Update element text")
-    public static void noWaitSendKeys(WebElement elem, String text) {
+    @Step("Type text")
+    public static void type(WebElement elem, String text) {
         elem.sendKeys(text);
     }
 
-    @Step("Wait for element visibility, then send keys & sleep")
-    public static void sendKeysAndWait(WebElement elem, String text) {
+    @Step("Wait for element visibility & type text")
+    public static void waitAndType(WebElement elem, String text) {
         wait.until((ExpectedConditions.visibilityOf(elem)));
         elem.sendKeys(text);
         try {
@@ -56,13 +63,20 @@ public class UIActions extends CommonOps {
         }
     }
 
-    @Step("Mouse Hover 2 Elements & Click")
-    public static void mouseHover(WebElement elem1, WebElement elem2) {
-        action.moveToElement(elem1).moveToElement(elem2).click().build().perform();
+    @Step("Mouse Hover Element")
+    public static void mouseHover(WebElement element) {
+        action.moveToElement(element).build().perform();
+    }
+
+    @Step("Mouse Hover Element & sleep")
+    public static void mouseHover(WebElement element, long sleepTimeMillis) {
+        action.moveToElement(element).build().perform();
+        sleep(sleepTimeMillis);
     }
 
     @Step("Mouse Hover Element & Click")
-    public static void mouseHover(WebElement elem1) {
-        action.moveToElement(elem1).click().build().perform();
+    public static void mouseHoverClick(WebElement element) {
+        action.moveToElement(element).click().build().perform();
     }
+
 }

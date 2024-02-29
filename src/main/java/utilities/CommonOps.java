@@ -106,4 +106,12 @@ public class CommonOps extends Base {
         driver.manage().timeouts().implicitlyWait(timeout);
         wait = new WebDriverWait(driver, timeout);
     }
+
+    public static void sleep(long millis) {
+        try {
+                Thread.sleep(millis);
+        } catch (Exception e) {
+                System.out.println(e.toString());
+        }
+}
 }

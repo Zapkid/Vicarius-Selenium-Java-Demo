@@ -16,15 +16,19 @@ public class Listeners extends CommonOps implements ITestListener {
     }
 
     public void onTestSkipped(ITestResult test) {
-        System.out.println("----------- Skipping Test:" + test.getName() + " -------------");
+        System.out.println("----------- Skipping Test: " + test.getName() + " -------------");
     }
 
     public void onTestStart(ITestResult test) {
-        System.out.println("----------- Starting Test:" + test.getName() + " -------------");
+        String[] testName = test.getName().split("(?=\\p{Upper})");
+        String properTestName = String.join(" ", testName);
+        System.out.println("----------- Starting Test: " + properTestName + " -------------");
     }
 
     public void onTestSuccess(ITestResult test) {
-        System.out.println("----------- Test:" + test.getName() + " Passed -------------");
+        String[] testName = test.getName().split("(?=\\p{Upper})");
+        String properTestName = String.join(" ", testName);
+        System.out.println("----------- Test: " + properTestName + " Passed -------------");
 
         try {
             MonteScreenRecorder.stopRecord();
@@ -33,15 +37,14 @@ public class Listeners extends CommonOps implements ITestListener {
         }
 
         File file = new File("./test-recordings/" + test.getName() + ".avi");
-        if (file.delete())
-            System.out.println("Test recording Deleted Successfully");
-        else
+        if (!file.delete())
             System.out.println("Failed to Delete File");
-
     }
 
     public void onTestFailure(ITestResult test) {
-        System.out.println("----------- Test:" + test.getName() + " Failed -------------");
+        String[] testName = test.getName().split("(?=\\p{Upper})");
+        String properTestName = String.join(" ", testName);
+        System.out.println("----------- Test: " + properTestName + " Failed -------------");
 
         try {
             MonteScreenRecorder.stopRecord();

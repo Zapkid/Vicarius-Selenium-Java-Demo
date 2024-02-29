@@ -8,6 +8,7 @@ public class ManagePages extends Base {
     public static void initVicariusPages() {
         vicariusSignIn = PageFactory.initElements(driver, pageObjects.SignInPage.class);
         vicariusSignUp = PageFactory.initElements(driver, pageObjects.SignUpPage.class);
+        vicariusProduct = PageFactory.initElements(driver, pageObjects.ProductPage.class);
     }
 
 }

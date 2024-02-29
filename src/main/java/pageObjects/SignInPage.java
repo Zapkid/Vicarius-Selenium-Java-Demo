@@ -14,12 +14,28 @@ public class SignInPage extends SignBase {
         return emailInput;
     }
 
+    @FindBy(css = ".notification-title")
+    private WebElement notificationTitle;
+
+    @Step("Get Notification title element")
+    public WebElement getNotificationTitle() {
+        return notificationTitle;
+    }
+
     @FindBy(css = ".notification-content")
     private WebElement notificationContent;
 
     @Step("Get Notification content element")
     public WebElement getNotificationContent() {
         return notificationContent;
+    }
+
+    @FindBy(css = ".notification-close")
+    private WebElement notificationClose;
+
+    @Step("Get Notification close element")
+    public WebElement getNotificationClose() {
+        return notificationClose;
     }
 
     @FindBy(css = ".error-message")
@@ -30,12 +46,28 @@ public class SignInPage extends SignBase {
         return errorMessage;
     }
 
-    @FindBy(css = ".content .logo")
-    private WebElement contentLogo;
+    @FindBy(css = ".error-message a")
+    private WebElement errorMessageLink;
 
-    @Step("Get Content logo element")
-    public WebElement getContentLogo() {
-        return contentLogo;
+    @Step("Get Error message element")
+    public WebElement getErrorMessageLink() {
+        return errorMessageLink;
+    }
+
+    @FindBy(css = ".login .logo")
+    private WebElement loginLogo;
+
+    @Step("Get Login logo element")
+    public WebElement getLoginLogo() {
+        return loginLogo;
+    }
+
+    @FindBy(css = ".forgot")
+    private WebElement forgotEmailLink;
+
+    @Step("Get Forgot Email Link element")
+    public WebElement getForgotEmailLink() {
+        return forgotEmailLink;
     }
 
 }
