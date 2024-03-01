@@ -1,5 +1,4 @@
 
-
 import extensions.UIActions;
 import extensions.Verifications;
 import io.qameta.allure.Description;
@@ -17,10 +16,10 @@ public class SignUpPageTests extends CommonOps {
         @Test(description = "Valid Sign up", priority = 1)
         @Description("Tests a valid sign up")
         public void VicariusValidSignUp() {
-
+                // TODO: Add test
                 // WebFlows.signUp(VALID_EMAIL);
 
-                // Verifications.verifySignIn(HttpResponseStatus.OK);
+                // Verifications.verifySignUp(HttpResponseStatus.OK);
 
         }
 
@@ -67,12 +66,6 @@ public class SignUpPageTests extends CommonOps {
         @Description("Features & FAQ visible on Sign Up page")
         public void VicariusFeaturesAndFAQ() {
 
-                // TODO - Load texts from csv or json file
-                String[][] features = { { "Vuln Discovery", "You can’t fix what you can’t find." },
-                                { "Vuln Prioritization", "Focus on risks that have real potential for exploitation" },
-                                { "Vuln Remediation", "Don’t just find your flaws, fix them." },
-                                { "Automation", "Threats don’t take time off, but you can." } };
-
                 // Verify features icons & texts visibility
                 Verifications.verifyElementsAmountAndVisibility(vicariusSignUp.getFeaturesIcons(), features.length);
                 Verifications.verifyElementsAmountAndVisibility(vicariusSignUp.getFeaturesHeaders(), features.length);
@@ -103,7 +96,7 @@ public class SignUpPageTests extends CommonOps {
         @Test(description = "Empty Sign up", priority = 2)
         @Description("Verify Empty Sign Up errors & Inputs background color turns red")
         public void VicariusEmptySignUp() {
-
+                // TODO: Add test
         }
 
         // Note - This test only showcases the use of mouse hover on two different

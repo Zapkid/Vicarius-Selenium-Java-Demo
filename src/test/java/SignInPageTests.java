@@ -85,12 +85,6 @@ public class SignInPageTests extends CommonOps {
         @Description("Features & FAQ visible on Sign In page")
         public void VicariusFeaturesAndFAQ() {
 
-                // TODO - Load texts from csv or json file
-                String[][] features = { { "Vuln Discovery", "You can’t fix what you can’t find." },
-                                { "Vuln Prioritization", "Focus on risks that have real potential for exploitation" },
-                                { "Vuln Remediation", "Don’t just find your flaws, fix them." },
-                                { "Automation", "Threats don’t take time off, but you can." } };
-
                 // Verify features icons & texts visibility
                 Verifications.verifyElementsAmountAndVisibility(vicariusSignIn.getFeaturesIcons(), features.length);
                 Verifications.verifyElementsAmountAndVisibility(vicariusSignIn.getFeaturesHeaders(), features.length);
@@ -204,6 +198,7 @@ public class SignInPageTests extends CommonOps {
                 Verifications.verifyBoolean(pointA.equals(pointB), false);
         }
 
+        // TODO - Add chat interactions to the test
         @Test(description = "Chat Widget", priority = 4)
         @Description("Verify Chat Widget opens & closes")
         public void VicariusChatWidget() {
@@ -217,5 +212,6 @@ public class SignInPageTests extends CommonOps {
 
         }
 
-        // TODO - Extract all hard-coded values to json test data file
 }
+
+        // TODO - Extract all hard-coded values to json test data file

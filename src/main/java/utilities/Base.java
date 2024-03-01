@@ -20,7 +20,6 @@ public class Base {
     protected static pageObjects.SignUpPage vicariusSignUp;
     protected static pageObjects.ProductPage vicariusProduct;
 
-
     public static final int SLEEP_TIMEOUT = 500;
 
     // Vicarius
@@ -30,5 +29,11 @@ public class Base {
     public static final String VALID_EMAIL = "admin@vicarius.io";
     public static final String SUPPORT_EMAIL = "support@vicarius.io";
     public static final String API_SIGN_IN_URL = "https://www.vicarius.io/api/v2/forms/signin";
+    public static final String API_SIGN_UP_URL = "https://www.vicarius.io/api/v2/forms/signup";
     public static final String CHAT_IFRAME = "#hubspot-conversations-iframe";
+
+    public static final String[][] features = { { "Vuln Discovery", "You can’t fix what you can’t find." },
+            { "Vuln Prioritization", "Focus on risks that have real potential for exploitation" },
+            { "Vuln Remediation", "Don’t just find your flaws, fix them." },
+            { "Automation", "Threats don’t take time off, but you can." } };
 }
