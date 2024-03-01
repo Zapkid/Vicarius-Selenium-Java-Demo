@@ -39,7 +39,6 @@ public class MonteScreenRecorder extends ScreenRecorder {
             throw new IOException("\"" + movieFolder + "\" is not a directory.");
         }
 
-        // System.out.println("file is now created");
         return new File(movieFolder,
                 name + "." + Registry.getInstance().getExtension(fileFormat));
 
@@ -69,6 +68,5 @@ public class MonteScreenRecorder extends ScreenRecorder {
     // Stop recording
     public static void stopRecord() throws Exception {
         screenRecorder.stop();
-        // System.out.println("file stop recording");
     }
 }

@@ -11,7 +11,7 @@ This project uses Selenium with the TestNG framework in a Page Object Model (POM
 3. **Download dependencies**: Run `mvn dependency:resolve` to download all necessary dependencies to your local machine.
 
 ## Running Tests
-Tests can be run directly within the IDE using a Java Test runner extension or by running `mvn test` in the terminal command line from the project root. 
+Tests can be run directly within the IDE using a Java Test runner extension or by running `mvn test` in the terminal command line from the project root. Once the browser opens, tests will execute across the Vicarius webpages.
 
 ## Vicarius pages tested
 

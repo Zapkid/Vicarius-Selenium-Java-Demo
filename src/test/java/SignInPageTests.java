@@ -1,4 +1,4 @@
-package vicarius;
+
 
 import extensions.UIActions;
 import extensions.Verifications;
@@ -9,23 +9,11 @@ import workflows.WebFlows;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 @Listeners(utilities.Listeners.class)
 public class SignInPageTests extends CommonOps {
-
-        // TODO - Move to CommonOps & Extract to @Parameters & xml file
-        @BeforeClass
-        public void startSession() {
-                browserName = "chrome";
-                url = SIGN_IN_URL;
-
-                initWeb();
-        }
-
-        // TODO - Extract all hard-coded values to json test data file
 
         /**
          * Tests a valid sign in flow.
@@ -229,4 +217,5 @@ public class SignInPageTests extends CommonOps {
 
         }
 
+        // TODO - Extract all hard-coded values to json test data file
 }

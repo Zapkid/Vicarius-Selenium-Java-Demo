@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 11 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+            <a href="#" panel-name="suite-Web_Suite" class="navigator-link">
+              <span class="suite-name border-failed">Web Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Surefire_suite" class="navigator-link ">
-                    <span>[unset file name]</span>
+                  <a href="#" panel-name="test-xml-Web_Suite" class="navigator-link ">
+                    <span>C:\Projects\Selenium\A\demo\WebSuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Surefire_suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                  <a href="#" panel-name="testlist-Web_Suite" class="navigator-link ">
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Surefire_suite" class="navigator-link ">
+                  <a href="#" panel-name="group-Web_Suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Surefire_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-Web_Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Surefire_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-Web_Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Surefire_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-Web_Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Surefire_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-Web_Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,61 +92,105 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods,   9 passed</span>
+                    <span class="method-stats">16 methods, 11 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Web_Suite" class="hide-methods failed suite-Web_Suite"> (hide)</a> <!-- hide-methods failed suite-Web_Suite -->
+                      <a href="#" panel-name="suite-Web_Suite" class="show-methods failed suite-Web_Suite"> (show)</a> <!-- show-methods failed suite-Web_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Web_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Web_Suite" title="SignInPageTests" class="method navigator-link" hash-for-method="VicariusEmptySignIn">VicariusEmptySignIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Web_Suite" title="SignInPageTests" class="method navigator-link" hash-for-method="VicariusFeaturesAndFAQ">VicariusFeaturesAndFAQ</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Web_Suite" title="SignUpPageTests" class="method navigator-link" hash-for-method="VicariusFeaturesAndFAQ">VicariusFeaturesAndFAQ</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Web_Suite" title="SignInPageTests" class="method navigator-link" hash-for-method="VicariusInvalidSignIn">VicariusInvalidSignIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Web_Suite" title="SignInPageTests" class="method navigator-link" hash-for-method="VicariusMissingEmailSignIn">VicariusMissingEmailSignIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Web_Suite" title="SignInPageTests" class="method navigator-link" hash-for-method="VicariusMouseCursor">VicariusMouseCursor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Web_Suite" title="SignUpPageTests" class="method navigator-link" hash-for-method="VicariusMouseCursor">VicariusMouseCursor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Web_Suite" title="SignUpPageTests" class="method navigator-link" hash-for-method="VicariusOption">VicariusOption</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Web_Suite" title="SignInPageTests" class="method navigator-link" hash-for-method="VicariusUIVisible">VicariusUIVisible</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Web_Suite" title="SignUpPageTests" class="method navigator-link" hash-for-method="VicariusUIVisible">VicariusUIVisible</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Web_Suite" title="SignInPageTests" class="method navigator-link" hash-for-method="VicariusValidSignIn">VicariusValidSignIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Web_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
-                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Web_Suite" class="hide-methods passed suite-Web_Suite"> (hide)</a> <!-- hide-methods passed suite-Web_Suite -->
+                      <a href="#" panel-name="suite-Web_Suite" class="show-methods passed suite-Web_Suite"> (show)</a> <!-- show-methods passed suite-Web_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Surefire_suite">
+                    <div class="method-list-content passed suite-Web_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="vicarius.SignInPageTests" class="method navigator-link" hash-for-method="VicariusChatWidget">VicariusChatWidget</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Web_Suite" title="SignInPageTests" class="method navigator-link" hash-for-method="VicariusChatWidget">VicariusChatWidget</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="vicarius.SignInPageTests" class="method navigator-link" hash-for-method="VicariusEmptySignIn">VicariusEmptySignIn</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Web_Suite" title="SignUpPageTests" class="method navigator-link" hash-for-method="VicariusChatWidget">VicariusChatWidget</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="vicarius.SignInPageTests" class="method navigator-link" hash-for-method="VicariusFeaturesAndFAQ">VicariusFeaturesAndFAQ</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Web_Suite" title="SignUpPageTests" class="method navigator-link" hash-for-method="VicariusEmptySignUp">VicariusEmptySignUp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="vicarius.SignInPageTests" class="method navigator-link" hash-for-method="VicariusInvalidSignIn">VicariusInvalidSignIn</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Web_Suite" title="SignInPageTests" class="method navigator-link" hash-for-method="VicariusOption">VicariusOption</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="vicarius.SignInPageTests" class="method navigator-link" hash-for-method="VicariusMissingEmailSignIn">VicariusMissingEmailSignIn</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Web_Suite" title="SignUpPageTests" class="method navigator-link" hash-for-method="VicariusValidSignUp">VicariusValidSignUp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="vicarius.SignInPageTests" class="method navigator-link" hash-for-method="VicariusMouseCursor">VicariusMouseCursor</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="vicarius.SignInPageTests" class="method navigator-link" hash-for-method="VicariusOption">VicariusOption</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="vicarius.SignInPageTests" class="method navigator-link" hash-for-method="VicariusUIVisible">VicariusUIVisible</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="vicarius.SignInPageTests" class="method navigator-link" hash-for-method="VicariusValidSignIn">VicariusValidSignIn</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                    </div> <!-- method-list-content passed suite-Web_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -157,11 +201,500 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-passed">
+        <div panel-name="suite-Web_Suite" class="panel Web_Suite">
+          <div class="suite-Web_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">SignUpPageTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="VicariusFeaturesAndFAQ">
+                  </a> <!-- VicariusFeaturesAndFAQ -->
+                  <span class="method-name">VicariusFeaturesAndFAQ</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (6194ea15c090f7665b6286cd0c288aad)] -&gt; css selector: .features .icon svg] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at extensions.Verifications.verifyElementsAmountAndVisibility(Verifications.java:58)
+	at SignUpPageTests.VicariusFeaturesAndFAQ(SignUpPageTests.java:89)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: element not found
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6194ea15c090f7665b6286cd0c288aad, isElementDisplayed {id=f.98A370E8B4BA1B2FDED83F0417A9AB10.d.6F821CC7A75EF2A3C661D9779B1277D3.e.89}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kendel\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59835}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59835/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6194ea15c090f7665b6286cd0c288aad)] -&gt; css selector: .features .icon svg]
+Session ID: 6194ea15c090f7665b6286cd0c288aad
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 18 more
+... Removed 14 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Sign up page features & FAQ)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VicariusMouseCursor">
+                  </a> <!-- VicariusMouseCursor -->
+                  <span class="method-name">VicariusMouseCursor</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.cursor&quot;}
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6194ea15c090f7665b6286cd0c288aad, findElement {value=.cursor, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kendel\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59835}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59835/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6194ea15c090f7665b6286cd0c288aad
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getAttribute(Unknown Source)
+	at SignUpPageTests.VicariusMouseCursor(SignUpPageTests.java:130)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Mouse Cursor style)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VicariusOption">
+                  </a> <!-- VicariusOption -->
+                  <span class="method-name">VicariusOption</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6194ea15c090f7665b6286cd0c288aad, isElementDisplayed {id=f.98A370E8B4BA1B2FDED83F0417A9AB10.d.4A0478C7E911C572BA32586F36FD2BF8.e.78}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kendel\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59835}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59835/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6194ea15c090f7665b6286cd0c288aad)] -&gt; css selector: .header .option .text]
+Session ID: 6194ea15c090f7665b6286cd0c288aad
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at extensions.Verifications.verifyElementText(Verifications.java:25)
+	at SignUpPageTests.VicariusOption(SignUpPageTests.java:68)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Sign up page option)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VicariusUIVisible">
+                  </a> <!-- VicariusUIVisible -->
+                  <span class="method-name">VicariusUIVisible</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6194ea15c090f7665b6286cd0c288aad, isElementDisplayed {id=f.98A370E8B4BA1B2FDED83F0417A9AB10.d.4A0478C7E911C572BA32586F36FD2BF8.e.77}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kendel\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59835}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59835/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6194ea15c090f7665b6286cd0c288aad)] -&gt; css selector: .sign-right]
+Session ID: 6194ea15c090f7665b6286cd0c288aad
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at extensions.Verifications.verifyElementIsVisible(Verifications.java:31)
+	at SignUpPageTests.VicariusUIVisible(SignUpPageTests.java:46)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Sign up page elements visibility, text & style)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Web_Suite-class-failed -->
+          <div class="suite-Web_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">SignInPageTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="VicariusEmptySignIn">
+                  </a> <!-- VicariusEmptySignIn -->
+                  <span class="method-name">VicariusEmptySignIn</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.error-message&quot;}
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00eb159d684d889a2d9eb576e07b89d3, findElement {value=.error-message, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kendel\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59600}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59600/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00eb159d684d889a2d9eb576e07b89d3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getText(Unknown Source)
+	at extensions.Verifications.verifySignInErrorAndNotificationTexts(Verifications.java:155)
+	at SignInPageTests.VicariusEmptySignIn(SignInPageTests.java:179)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Empty Sign in)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VicariusFeaturesAndFAQ">
+                  </a> <!-- VicariusFeaturesAndFAQ -->
+                  <span class="method-name">VicariusFeaturesAndFAQ</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00eb159d684d889a2d9eb576e07b89d3, isElementDisplayed {id=f.5FB5A45FB0098E8EA148D1AC3C007A89.d.4C8F06E21EDCF4D23D6E86FB3E02BB3C.e.82}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kendel\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59600}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59600/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (00eb159d684d889a2d9eb576e07b89d3)] -&gt; css selector: .features .icon svg]
+Session ID: 00eb159d684d889a2d9eb576e07b89d3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at extensions.Verifications.verifyElementsAmountAndVisibility(Verifications.java:58)
+	at SignInPageTests.VicariusFeaturesAndFAQ(SignInPageTests.java:107)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Sign in page features & FAQ)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VicariusInvalidSignIn">
+                  </a> <!-- VicariusInvalidSignIn -->
+                  <span class="method-name">VicariusInvalidSignIn</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.error-message&quot;}
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00eb159d684d889a2d9eb576e07b89d3, findElement {value=.error-message, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kendel\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59600}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59600/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00eb159d684d889a2d9eb576e07b89d3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getText(Unknown Source)
+	at extensions.Verifications.verifySignInErrorAndNotificationTexts(Verifications.java:155)
+	at SignInPageTests.VicariusInvalidSignIn(SignInPageTests.java:152)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Invalid Email Sign in)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VicariusMissingEmailSignIn">
+                  </a> <!-- VicariusMissingEmailSignIn -->
+                  <span class="method-name">VicariusMissingEmailSignIn</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: .notification-content&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at extensions.Verifications.verifyElementText(Verifications.java:25)
+	at extensions.Verifications.verifySignIn(Verifications.java:143)
+	at SignInPageTests.VicariusMissingEmailSignIn(SignInPageTests.java:138)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.notification-content&quot;}
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00eb159d684d889a2d9eb576e07b89d3, findElement {value=.notification-content, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kendel\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59600}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59600/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00eb159d684d889a2d9eb576e07b89d3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 19 more
+... Removed 14 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Email not found Sign In)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VicariusMouseCursor">
+                  </a> <!-- VicariusMouseCursor -->
+                  <span class="method-name">VicariusMouseCursor</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.cursor&quot;}
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00eb159d684d889a2d9eb576e07b89d3, findElement {value=.cursor, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kendel\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59600}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59600/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00eb159d684d889a2d9eb576e07b89d3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getAttribute(Unknown Source)
+	at SignInPageTests.VicariusMouseCursor(SignInPageTests.java:207)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Mouse Cursor style)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VicariusUIVisible">
+                  </a> <!-- VicariusUIVisible -->
+                  <span class="method-name">VicariusUIVisible</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: element not found
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00eb159d684d889a2d9eb576e07b89d3, isElementDisplayed {id=f.5FB5A45FB0098E8EA148D1AC3C007A89.d.66808231B495010EADA0D73F28812C2F.e.105}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kendel\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59600}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59600/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (00eb159d684d889a2d9eb576e07b89d3)] -&gt; css selector: .sign-right]
+Session ID: 00eb159d684d889a2d9eb576e07b89d3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+	at extensions.Verifications.verifyElementIsVisible(Verifications.java:32)
+	at SignInPageTests.VicariusUIVisible(SignInPageTests.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Sign in page elements visibility, text & style)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VicariusValidSignIn">
+                  </a> <!-- VicariusValidSignIn -->
+                  <span class="method-name">VicariusValidSignIn</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: .notification-content&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at extensions.Verifications.verifyElementText(Verifications.java:25)
+	at extensions.Verifications.verifySignIn(Verifications.java:131)
+	at SignInPageTests.VicariusValidSignIn(SignInPageTests.java:42)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.notification-content&quot;}
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00eb159d684d889a2d9eb576e07b89d3, findElement {value=.notification-content, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kendel\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59600}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59600/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00eb159d684d889a2d9eb576e07b89d3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 19 more
+... Removed 14 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Valid Sign in)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Web_Suite-class-failed -->
+          <div class="suite-Web_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">vicarius.SignInPageTests</span>
+              <span class="class-name">SignUpPageTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -175,47 +708,37 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="VicariusEmptySignIn">
-                  </a> <!-- VicariusEmptySignIn -->
-                  <span class="method-name">VicariusEmptySignIn</span>
+                  <a name="VicariusEmptySignUp">
+                  </a> <!-- VicariusEmptySignUp -->
+                  <span class="method-name">VicariusEmptySignUp</span>
                   <em>
-(Empty Sign in)                  </em>
+(Empty Sign up)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="VicariusFeaturesAndFAQ">
-                  </a> <!-- VicariusFeaturesAndFAQ -->
-                  <span class="method-name">VicariusFeaturesAndFAQ</span>
+                  <a name="VicariusValidSignUp">
+                  </a> <!-- VicariusValidSignUp -->
+                  <span class="method-name">VicariusValidSignUp</span>
                   <em>
-(Sign in page features & FAQ)                  </em>
+(Valid Sign up)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Web_Suite-class-passed -->
+          <div class="suite-Web_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">SignInPageTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="VicariusInvalidSignIn">
-                  </a> <!-- VicariusInvalidSignIn -->
-                  <span class="method-name">VicariusInvalidSignIn</span>
+                  <a name="VicariusChatWidget">
+                  </a> <!-- VicariusChatWidget -->
+                  <span class="method-name">VicariusChatWidget</span>
                   <em>
-(Invalid Email Sign in)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="VicariusMissingEmailSignIn">
-                  </a> <!-- VicariusMissingEmailSignIn -->
-                  <span class="method-name">VicariusMissingEmailSignIn</span>
-                  <em>
-(Email not found Sign In)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="VicariusMouseCursor">
-                  </a> <!-- VicariusMouseCursor -->
-                  <span class="method-name">VicariusMouseCursor</span>
-                  <em>
-(Mouse Cursor style)                  </em>
+(Chat Widget)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -227,224 +750,339 @@
 (Sign in page option)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="VicariusUIVisible">
-                  </a> <!-- VicariusUIVisible -->
-                  <span class="method-name">VicariusUIVisible</span>
-                  <em>
-(Sign in page elements visibility, text & style)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="VicariusValidSignIn">
-                  </a> <!-- VicariusValidSignIn -->
-                  <span class="method-name">VicariusValidSignIn</span>
-                  <em>
-(Valid Sign in)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-passed -->
-        </div> <!-- panel Surefire_suite -->
-        <div panel-name="test-xml-Surefire_suite" class="panel">
+          </div> <!-- suite-Web_Suite-class-passed -->
+        </div> <!-- panel Web_Suite -->
+        <div panel-name="test-xml-Web_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Projects\Selenium\A\demo\WebSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
+&lt;suite parallel=&quot;methods&quot; name=&quot;Web Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;utilities.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;Sign In Page Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;BrowserName&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;URL&quot; value=&quot;https://www.vicarius.io/sign/in&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;vicarius.SignInPageTests&quot;/&gt;
+      &lt;class name=&quot;SignInPageTests&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Surefire test --&gt;
-&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+  &lt;/test&gt; &lt;!-- Sign In Page Tests --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;Sign Up Page Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;BrowserName&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;URL&quot; value=&quot;https://www.vicarius.io/sign/up&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;SignUpPageTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Sign Up Page Tests --&gt;
+&lt;/suite&gt; &lt;!-- Web Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Surefire_suite" class="panel">
+        <div panel-name="testlist-Web_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Surefire suite</span>
+            <span class="header-content">Tests for Web Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (1 class)</span>
+                <span class="test-name">Sign In Page Tests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Sign Up Page Tests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Surefire_suite" class="panel">
+        <div panel-name="group-Web_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Surefire suite</span>
+            <span class="header-content">Groups for Web Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Surefire_suite" class="panel">
+        <div panel-name="times-Web_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Surefire suite</span>
+            <span class="header-content">Times for Web Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Surefire_suite');
-function tableData_Surefire_suite() {
+suiteTableInitFunctions.push('tableData_Web_Suite');
+function tableData_Web_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(9);
+data.addRows(16);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VicariusEmptySignIn')
-data.setCell(0, 2, 'vicarius.SignInPageTests')
-data.setCell(0, 3, 12625);
+data.setCell(0, 1, 'VicariusValidSignIn')
+data.setCell(0, 2, 'SignInPageTests')
+data.setCell(0, 3, 93005);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'VicariusInvalidSignIn')
-data.setCell(1, 2, 'vicarius.SignInPageTests')
-data.setCell(1, 3, 12599);
+data.setCell(1, 1, 'VicariusMissingEmailSignIn')
+data.setCell(1, 2, 'SignInPageTests')
+data.setCell(1, 3, 73439);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'VicariusChatWidget')
-data.setCell(2, 2, 'vicarius.SignInPageTests')
-data.setCell(2, 3, 11867);
+data.setCell(2, 1, 'VicariusFeaturesAndFAQ')
+data.setCell(2, 2, 'SignInPageTests')
+data.setCell(2, 3, 64768);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'VicariusValidSignIn')
-data.setCell(3, 2, 'vicarius.SignInPageTests')
-data.setCell(3, 3, 3664);
+data.setCell(3, 1, 'VicariusUIVisible')
+data.setCell(3, 2, 'SignUpPageTests')
+data.setCell(3, 3, 56532);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'VicariusMouseCursor')
-data.setCell(4, 2, 'vicarius.SignInPageTests')
-data.setCell(4, 3, 1837);
+data.setCell(4, 1, 'VicariusChatWidget')
+data.setCell(4, 2, 'SignUpPageTests')
+data.setCell(4, 3, 56267);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'VicariusMissingEmailSignIn')
-data.setCell(5, 2, 'vicarius.SignInPageTests')
-data.setCell(5, 3, 1528);
+data.setCell(5, 1, 'VicariusEmptySignIn')
+data.setCell(5, 2, 'SignInPageTests')
+data.setCell(5, 3, 47485);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'VicariusFeaturesAndFAQ')
-data.setCell(6, 2, 'vicarius.SignInPageTests')
-data.setCell(6, 3, 928);
+data.setCell(6, 1, 'VicariusOption')
+data.setCell(6, 2, 'SignUpPageTests')
+data.setCell(6, 3, 35772);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'VicariusUIVisible')
-data.setCell(7, 2, 'vicarius.SignInPageTests')
-data.setCell(7, 3, 626);
+data.setCell(7, 1, 'VicariusChatWidget')
+data.setCell(7, 2, 'SignInPageTests')
+data.setCell(7, 3, 30092);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'VicariusOption')
-data.setCell(8, 2, 'vicarius.SignInPageTests')
-data.setCell(8, 3, 417);
-window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+data.setCell(8, 1, 'VicariusFeaturesAndFAQ')
+data.setCell(8, 2, 'SignUpPageTests')
+data.setCell(8, 3, 29377);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'VicariusMouseCursor')
+data.setCell(9, 2, 'SignUpPageTests')
+data.setCell(9, 3, 21385);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'VicariusInvalidSignIn')
+data.setCell(10, 2, 'SignInPageTests')
+data.setCell(10, 3, 19165);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'VicariusMouseCursor')
+data.setCell(11, 2, 'SignInPageTests')
+data.setCell(11, 3, 12122);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'VicariusOption')
+data.setCell(12, 2, 'SignInPageTests')
+data.setCell(12, 3, 8245);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'VicariusUIVisible')
+data.setCell(13, 2, 'SignInPageTests')
+data.setCell(13, 3, 5783);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'VicariusEmptySignUp')
+data.setCell(14, 2, 'SignUpPageTests')
+data.setCell(14, 3, 3);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'VicariusValidSignUp')
+data.setCell(15, 2, 'SignUpPageTests')
+data.setCell(15, 3, 3);
+window.suiteTableData['Web_Suite']= { tableData: data, tableDiv: 'times-div-Web_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 46 seconds</span>
-              <div id="times-div-Surefire_suite">
-              </div> <!-- times-div-Surefire_suite -->
+              <span class="suite-total-time">Total running time: 9 minutes</span>
+              <div id="times-div-Web_Suite">
+              </div> <!-- times-div-Web_Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Surefire_suite" class="panel">
+        <div panel-name="reporter-Web_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Surefire suite</span>
+            <span class="header-content">Reporter output for Web Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+        <div panel-name="ignored-methods-Web_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Surefire_suite" class="panel">
+        <div panel-name="chronological-Web_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">vicarius.SignInPageTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">SignInPageTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">startSession</span>
+                <span class="method-name">startSession(chrome, https://www.vicarius.io/sign/in)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void vicarius.SignInPageTests.VicariusValidSignIn())</span>
-                <span class="method-start">2109 ms</span>
+                <span class="method-name">beforeMethod(public void SignInPageTests.VicariusInvalidSignIn())</span>
+                <span class="method-start">2276 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void SignInPageTests.VicariusOption())</span>
+                <span class="method-start">2276 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void SignInPageTests.VicariusValidSignIn())</span>
+                <span class="method-start">2277 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void SignInPageTests.VicariusEmptySignIn())</span>
+                <span class="method-start">2277 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void SignInPageTests.VicariusMissingEmailSignIn())</span>
+                <span class="method-start">2277 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">VicariusValidSignIn</span>
-                <span class="method-start">3858 ms</span>
+                <span class="method-start">3931 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void vicarius.SignInPageTests.VicariusEmptySignIn())</span>
-                <span class="method-start">7719 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">VicariusEmptySignIn</span>
-                <span class="method-start">9012 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void vicarius.SignInPageTests.VicariusInvalidSignIn())</span>
-                <span class="method-start">21756 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">VicariusInvalidSignIn</span>
-                <span class="method-start">22898 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void vicarius.SignInPageTests.VicariusMissingEmailSignIn())</span>
-                <span class="method-start">35562 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">VicariusMissingEmailSignIn</span>
-                <span class="method-start">36826 ms</span>
+                <span class="method-start">33553 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void vicarius.SignInPageTests.VicariusOption())</span>
-                <span class="method-start">38452 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VicariusOption</span>
-                <span class="method-start">39588 ms</span>
+                <span class="method-start">35347 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">VicariusInvalidSignIn</span>
+                <span class="method-start">36791 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">VicariusEmptySignIn</span>
+                <span class="method-start">38667 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void vicarius.SignInPageTests.VicariusFeaturesAndFAQ())</span>
-                <span class="method-start">40105 ms</span>
+                <span class="method-name">beforeMethod(public void SignInPageTests.VicariusFeaturesAndFAQ())</span>
+                <span class="method-start">43783 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">VicariusFeaturesAndFAQ</span>
-                <span class="method-start">41436 ms</span>
+                <span class="method-start">46012 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void vicarius.SignInPageTests.VicariusUIVisible())</span>
-                <span class="method-start">42484 ms</span>
+                <span class="method-name">beforeMethod(public void SignInPageTests.VicariusUIVisible())</span>
+                <span class="method-start">87015 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void SignInPageTests.VicariusChatWidget())</span>
+                <span class="method-start">107743 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">VicariusUIVisible</span>
-                <span class="method-start">43652 ms</span>
+                <span class="method-start">110081 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void vicarius.SignInPageTests.VicariusChatWidget())</span>
-                <span class="method-start">44372 ms</span>
+                <span class="method-name">beforeMethod(public void SignInPageTests.VicariusMouseCursor())</span>
+                <span class="method-start">110436 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VicariusChatWidget</span>
-                <span class="method-start">45603 ms</span>
+                <span class="method-start">112315 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void vicarius.SignInPageTests.VicariusMouseCursor())</span>
-                <span class="method-start">57549 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">VicariusMouseCursor</span>
-                <span class="method-start">59415 ms</span>
+                <span class="method-start">114416 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeSession</span>
-                <span class="method-start">61369 ms</span>
+                <span class="method-start">142420 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">SignUpPageTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">startSession(chrome, https://www.vicarius.io/sign/up)</span>
+                <span class="method-start">144623 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void SignUpPageTests.VicariusUIVisible())</span>
+                <span class="method-start">150317 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void SignUpPageTests.VicariusValidSignUp())</span>
+                <span class="method-start">150317 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void SignUpPageTests.VicariusOption())</span>
+                <span class="method-start">150318 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void SignUpPageTests.VicariusFeaturesAndFAQ())</span>
+                <span class="method-start">150318 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void SignUpPageTests.VicariusEmptySignUp())</span>
+                <span class="method-start">150320 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">VicariusUIVisible</span>
+                <span class="method-start">156058 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">VicariusOption</span>
+                <span class="method-start">176836 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">VicariusValidSignUp</span>
+                <span class="method-start">197316 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void SignUpPageTests.VicariusChatWidget())</span>
+                <span class="method-start">197835 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">VicariusFeaturesAndFAQ</span>
+                <span class="method-start">204811 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">VicariusEmptySignUp</span>
+                <span class="method-start">206729 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void SignUpPageTests.VicariusMouseCursor())</span>
+                <span class="method-start">207158 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">VicariusChatWidget</span>
+                <span class="method-start">209438 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">VicariusMouseCursor</span>
+                <span class="method-start">212206 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeSession</span>
+                <span class="method-start">265714 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

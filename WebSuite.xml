@@ -6,13 +6,19 @@
         <listener class-name="utilities.Listeners" />
     </listeners>
 
-    <test name="Web Test">
+    <test name="Sign In Page Tests">
         <parameter name="BrowserName" value="chrome" />
         <parameter name="URL" value="https://www.vicarius.io/sign/in" />
-        <parameter name="Timeout" value="10" />
         <classes>
-            <class name="vicarius.SignIn">
-            </class>
+            <class name="SignInPageTests"></class>
+        </classes>
+    </test>
+
+    <test name="Sign Up Page Tests">
+        <parameter name="BrowserName" value="chrome" />
+        <parameter name="URL" value="https://www.vicarius.io/sign/up" />
+        <classes>
+            <class name="SignUpPageTests"></class>
         </classes>
     </test>
 

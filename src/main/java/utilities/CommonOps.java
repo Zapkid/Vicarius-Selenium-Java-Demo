@@ -32,14 +32,14 @@ public class CommonOps extends Base {
     public static final Logger LOG = LoggerFactory.getLogger(CommonOps.class);
 
     // Initiate Parameters from Suite XML
-    // @BeforeClass
-    // @Parameters({ "BrowserName", "URL"})
-    // public void startSession(String BrowserName, String URL) {
-    // browserName = BrowserName;
-    // url = URL;
+    @BeforeClass
+    @Parameters({ "BrowserName", "URL" })
+    public void startSession(String BrowserName, String URL) {
+        browserName = BrowserName;
+        url = URL;
 
-    // initWeb();
-    // }
+        initWeb();
+    }
 
     // Close session
     @AfterClass

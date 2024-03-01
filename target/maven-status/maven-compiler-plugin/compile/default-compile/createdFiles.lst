@@ -1,0 +1,13 @@
+pageObjects\SignUpPage.class
+utilities\Base.class
+utilities\ManagePages.class
+extensions\UIActions.class
+pageObjects\SignBase.class
+workflows\WebFlows.class
+utilities\CommonOps.class
+utilities\Listeners.class
+extensions\Verifications.class
+pageObjects\ProductPage.class
+utilities\MonteScreenRecorder.class
+pageObjects\BasePage.class
+pageObjects\SignInPage.class
