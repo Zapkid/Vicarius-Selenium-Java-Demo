@@ -7,8 +7,6 @@ import io.qameta.allure.Description;
 import utilities.CommonOps;
 import workflows.WebFlows;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
@@ -22,8 +20,7 @@ public class SignInPageTests extends CommonOps {
         @BeforeClass
         public void startSession() {
                 browserName = "chrome";
-                url = "https://www.vicarius.io/sign/in";
-                timeout = Duration.ofSeconds(5);
+                url = SIGN_IN_URL;
 
                 initWeb();
         }
@@ -37,20 +34,13 @@ public class SignInPageTests extends CommonOps {
          * and API response after sign in.
          */
         @Test(description = "Valid Sign in", priority = 1)
-        @Description("Valid Sign In flow, API response success status code 200 OK")
+        @Description("Tests a valid sign in flow with valid credentials. Verifies the notification text, submit button state, and API response after sign in.")
         public void VicariusValidSignIn() {
 
                 WebFlows.signIn(VALID_EMAIL);
 
-                // Verify notification text
-                Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
-                                "If the email address exists and is active, further instructions have been sent to your email address.");
+                Verifications.verifySignIn(HttpResponseStatus.OK);
 
-                // Verify login button disabled
-                Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), false);
-
-                // Verify sign in API response
-                Verifications.verifyApiResponse(API_SIGN_IN_URL, HttpResponseStatus.OK);
         }
 
         // Note: Can easily be split into multiple tests - kept in one test since no
@@ -77,12 +67,15 @@ public class SignInPageTests extends CommonOps {
                 // Verify Forgot email link
                 Verifications.verifyElementText(vicariusSignIn.getForgotEmailLink(), "Forgot my e-mail");
                 Verifications.verifyString(vicariusSignIn.getForgotEmailLink().getAttribute("href"),
-                                "mailto:support@vicarius.io");
+                                "mailto:" + SUPPORT_EMAIL);
 
                 // Verify Email input initial background-color
                 Verifications.verifyElementCss(vicariusSignIn.getEmailInput().findElement(By.xpath("parent::*")),
                                 "background-color",
                                 "rgba(76, 78, 240, 0.2)");
+
+                // Verify login button enabled
+                Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), true);
         }
 
         @Test(description = "Sign in page option", priority = 2)
@@ -93,16 +86,17 @@ public class SignInPageTests extends CommonOps {
                 Verifications.verifyElementText(vicariusSignIn.getHeaderOptionText(), "Don't have an account?");
                 Verifications.verifyElementText(vicariusSignIn.getHeaderOptionLink(), "Start Free Trial");
                 Verifications.verifyString(vicariusSignIn.getHeaderOptionLink().getAttribute("href"),
-                                "https://www.vicarius.io/sign/up");
+                                SIGN_UP_URL);
 
                 // Trigger hover effect
                 UIActions.mouseHover(vicariusSignIn.getHeaderOptionLink());
                 // TODO - Add assertion on header option link hover effect
         }
 
-        @Test(description = "Sign in page features & faq", priority = 3)
-        @Description("Features & faq visible on Sign In page")
-        public void VicariusFeatures() {
+        @Test(description = "Sign in page features & FAQ", priority = 3)
+        @Description("Features & FAQ visible on Sign In page")
+        public void VicariusFeaturesAndFAQ() {
+
                 // TODO - Load texts from csv or json file
                 String[][] features = { { "Vuln Discovery", "You can’t fix what you can’t find." },
                                 { "Vuln Prioritization", "Focus on risks that have real potential for exploitation" },
@@ -128,31 +122,26 @@ public class SignInPageTests extends CommonOps {
                         Verifications.verifyString(featureText.getText(), features[i][1]);
                 }
 
-                // Verify faq link
+                // Verify FAQ link
                 Verifications.verifyElementText(vicariusSignIn.getFrequentlyAskedQuestionsLink(),
                                 "Frequently Asked Questions →");
                 Verifications.verifyString(vicariusSignIn.getFrequentlyAskedQuestionsLink().getAttribute("href"),
-                                "https://customer-portal.vicarius.io/");
+                                CUSTOMER_PORTAL_URL + "/");
         }
 
         @Test(description = "Email not found Sign In", priority = 2)
         @Description("Valid unrecognized email Sign in - Invalid email address API response")
         public void VicariusMissingEmailSignIn() {
+
                 WebFlows.signIn("qa.test@victorius.io");
 
-                // Verify notification text
-                Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
-                                "If the email address exists and is active, further instructions have been sent to your email address.");
-
-                // Verify login button disabled
-                Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), false);
-
-                // Verify sign in API response
-                Verifications.verifyApiResponse(API_SIGN_IN_URL, HttpResponseStatus.BAD_REQUEST,
+                Verifications.verifySignIn(HttpResponseStatus.BAD_REQUEST,
                                 "Invalid email address");
+
         }
 
         // TODO - Merge with Empty sign in test - Use DDT with data-provider
+        // TODO - Add test to verify notification disappears on its own
         @Test(description = "Invalid Email Sign in", priority = 2)
         @Description("Invalid Email Sign In errors & Input background color turns red")
         public void VicariusInvalidSignIn() {
@@ -160,27 +149,19 @@ public class SignInPageTests extends CommonOps {
                 WebFlows.signIn("sum.ting.wong");
 
                 // Verify sign in error & notification texts
-                Verifications.verifyStringContains(vicariusSignIn.getErrorMessage().getText(),
-                                "Invalid email address");
-                Verifications.verifyElementText(vicariusSignIn.getNotificationTitle(),
-                                "Validation failed");
-                Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
-                                "Please, verify if all fields are correctly filled.");
+                Verifications.verifySignInErrorAndNotificationTexts();
 
                 // Verify login button enabled
                 Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), true);
 
-                // TODO - Add test to verify notification disappears on its own
                 // Verify notification closes on close
-                Verifications.verifyElementIsVisible(vicariusSignIn.getNotificationClose());
-                UIActions.click(vicariusSignIn.getNotificationClose(), 1_000);
-                Verifications.verifyElementNotFound(".notification-content");
+                WebFlows.verifyCloseNotification();
 
                 // Verify error link
                 Verifications.verifyElementText(vicariusSignIn.getErrorMessageLink(),
                                 "Get a Free Trial");
                 Verifications.verifyString(vicariusSignIn.getErrorMessageLink().getAttribute("href"),
-                                "https://www.vicarius.io/sign/up");
+                                SIGN_UP_URL);
 
                 // Verify email input background-color changed to red
                 Verifications.verifyElementCss(vicariusSignIn.getEmailInput().findElement(By.xpath("parent::*")),
@@ -191,30 +172,22 @@ public class SignInPageTests extends CommonOps {
         @Test(description = "Empty Sign in", priority = 2)
         @Description("Verify Empty Email Sign In errors & Input background color turns red")
         public void VicariusEmptySignIn() {
+
                 WebFlows.signIn("");
 
                 // Verify sign in error & notification texts
-                Verifications.verifyStringContains(vicariusSignIn.getErrorMessage().getText(),
-                                "Invalid email address");
-                Verifications.verifyElementText(vicariusSignIn.getNotificationTitle(),
-                                "Validation failed");
-                Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
-                                "Please, verify if all fields are correctly filled.");
+                Verifications.verifySignInErrorAndNotificationTexts();
 
                 // Verify login button enabled
                 Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), true);
 
-                // TODO - Add test to verify notification disappears on its own
-                // Verify notification closes on close
-                Verifications.verifyElementIsVisible(vicariusSignIn.getNotificationClose());
-                UIActions.click(vicariusSignIn.getNotificationClose(), 1_000);
-                Verifications.verifyElementNotFound(".notification-content");
+                WebFlows.verifyCloseNotification();
 
                 // Verify error link
                 Verifications.verifyElementText(vicariusSignIn.getErrorMessageLink(),
                                 "Get a Free Trial");
                 Verifications.verifyString(vicariusSignIn.getErrorMessageLink().getAttribute("href"),
-                                "https://www.vicarius.io/sign/up");
+                                SIGN_UP_URL);
 
                 // Verify email input background-color changed to red
                 Verifications.verifyElementCss(vicariusSignIn.getEmailInput().findElement(By.xpath("parent::*")),
@@ -232,30 +205,28 @@ public class SignInPageTests extends CommonOps {
                 // Move mouse to point A - causes style transform change
                 UIActions.mouseHover(vicariusSignIn.getContentHeading(), SLEEP_TIMEOUT);
                 String pointA = vicariusSignIn.getCursor().getAttribute("style");
+                LOG.info("Cursor style: " + pointA);
 
                 // Move mouse to point B - causes style transform change
                 UIActions.mouseHover(vicariusSignIn.getLogo(), SLEEP_TIMEOUT);
                 String pointB = vicariusSignIn.getCursor().getAttribute("style");
+                LOG.info("Cursor style: " + pointB);
 
                 // Verify cursor style has changed
                 Verifications.verifyBoolean(pointA.equals(pointB), false);
         }
 
         @Test(description = "Chat Widget", priority = 4)
-        @Description("Verify Chat Widget opens")
+        @Description("Verify Chat Widget opens & closes")
         public void VicariusChatWidget() {
 
                 // Switch to chat widget iframe
-                WebElement iframe = driver.findElement(By.cssSelector("iframe[id='hubspot-conversations-iframe']"));
-                Verifications.verifyElementIsVisible(iframe);
-                driver.switchTo().frame(iframe);
+                CommonOps.switchToIFrame(CHAT_IFRAME);
 
                 // Open & close chat
-                Verifications.verifyElementIsVisible(vicariusSignIn.getChatWidgetLauncher());
-                UIActions.click(vicariusSignIn.getChatWidgetLauncher(), SLEEP_TIMEOUT);
-                Verifications.verifyElementIsVisible(vicariusSignIn.getLiveChatWidget());
-                UIActions.click(vicariusSignIn.getChatWidgetLauncher(), SLEEP_TIMEOUT);
-                Verifications.verifyElementNotFound("#live-chat-widget");
+                WebFlows.openChat();
+                WebFlows.closeChat();
+
         }
 
 }

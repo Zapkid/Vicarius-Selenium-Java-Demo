@@ -125,4 +125,38 @@ public class Verifications extends CommonOps {
         }
     }
 
+    public static void verifySignIn(HttpResponseStatus responseStatusCode) {
+        // Verify notification text
+        Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
+                "If the email address exists and is active, further instructions have been sent to your email address.");
+
+        // Verify login button disabled
+        Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), false);
+
+        // Verify sign in API response
+        Verifications.verifyApiResponse(API_SIGN_IN_URL, responseStatusCode);
+    }
+
+    public static void verifySignIn(HttpResponseStatus responseStatusCode, String errorMessage) {
+        // Verify notification text
+        Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
+                "If the email address exists and is active, further instructions have been sent to your email address.");
+
+        // Verify login button disabled
+        Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), false);
+
+        // Verify sign in API response
+        Verifications.verifyApiResponse(API_SIGN_IN_URL, responseStatusCode,
+                errorMessage);
+    }
+
+    public static void verifySignInErrorAndNotificationTexts() {
+        Verifications.verifyStringContains(vicariusSignIn.getErrorMessage().getText(),
+                "Invalid email address");
+        Verifications.verifyElementText(vicariusSignIn.getNotificationTitle(),
+                "Validation failed");
+        Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
+                "Please, verify if all fields are correctly filled.");
+    }
+
 }

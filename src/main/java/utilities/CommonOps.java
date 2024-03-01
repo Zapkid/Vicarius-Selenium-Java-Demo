@@ -4,8 +4,10 @@ import io.qameta.allure.Attachment;
 import workflows.WebFlows;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -17,10 +19,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.*;
+
+import extensions.Verifications;
+
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.sql.Timestamp;
+import java.time.Duration;
 import java.util.Date;
 import java.util.logging.Level;
 
@@ -115,9 +121,16 @@ public class CommonOps extends Base {
 
     public static void sleep(long millis) {
         try {
-                Thread.sleep(millis);
+            Thread.sleep(millis);
         } catch (Exception e) {
-                System.out.println(e.toString());
+            System.out.println(e.toString());
         }
-}
+    }
+
+    public static void switchToIFrame(String iframeCssSelector) {
+        WebElement iframe = driver.findElement(By.cssSelector(iframeCssSelector));
+        Verifications.verifyElementIsVisible(iframe);
+        LOG.info("Switching to iframe: " + iframeCssSelector);
+        driver.switchTo().frame(iframe);
+    }
 }
