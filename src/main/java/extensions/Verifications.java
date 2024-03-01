@@ -68,6 +68,7 @@ public class Verifications extends CommonOps {
 
     @Step("Verify Response status code")
     public static void verifyApiResponse(String Url, HttpResponseStatus statusCode) {
+        // TODO - FIX: Only works for chrome driver
         LogEntries les = driver.manage().logs().get(LogType.PERFORMANCE);
         for (LogEntry le : les) {
             if (le.getMessage().contains(Url)

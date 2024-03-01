@@ -1,10 +1,6 @@
 package workflows;
 
 import utilities.CommonOps;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import extensions.UIActions;
 import extensions.Verifications;
 

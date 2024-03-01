@@ -1,8 +1,6 @@
 package utilities;
 
 import io.qameta.allure.Attachment;
-import workflows.WebFlows;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -11,7 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
@@ -19,14 +19,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.*;
-
 import extensions.Verifications;
-
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.sql.Timestamp;
-import java.time.Duration;
 import java.util.Date;
 import java.util.logging.Level;
 
@@ -36,16 +33,10 @@ public class CommonOps extends Base {
 
     // Initiate Parameters from Suite XML
     // @BeforeClass
-    // @Parameters({ "BrowserName", "URL", "Timeout" })
-    // public void startSession(String BrowserName, String URL, String Timeout) {
-    // // --- Init Params ---
+    // @Parameters({ "BrowserName", "URL"})
+    // public void startSession(String BrowserName, String URL) {
     // browserName = BrowserName;
     // url = URL;
-    // try {
-    // timeout = Duration.ofSeconds(Integer.parseInt(Timeout));
-    // } catch (NumberFormatException e) {
-    // System.out.println("Invalid integer input");
-    // }
 
     // initWeb();
     // }
@@ -71,27 +62,45 @@ public class CommonOps extends Base {
 
     // Initiate Browser, Navigate to URL, Actions & Wait
     public static void initWeb() {
+        if (browserName.equalsIgnoreCase("chrome")) {
+            initChrome();
+        } else if (browserName.equalsIgnoreCase("firefox")) {
+            initFireFox();
+        } else if (browserName.equalsIgnoreCase("edge")) {
+            initEdge();
+        } else {
+            throw new RuntimeException("Invalid Browser Type");
+        }
 
+        driver.manage().window().maximize();
+        setDriverTimeoutAndWait();
+        action = new Actions(driver);
+
+        ManagePages.initVicariusPages();
+    }
+
+    private static void initEdge() {
+        EdgeOptions options = new EdgeOptions();
+        LoggingPreferences logPrefs = new LoggingPreferences();
+        logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
+        options.setCapability("goog:loggingPrefs", logPrefs);
+        driver = new EdgeDriver();
+    }
+
+    private static void initFireFox() {
+        FirefoxOptions options = new FirefoxOptions();
+        LoggingPreferences logPrefs = new LoggingPreferences();
+        logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
+        options.setCapability("goog:loggingPrefs", logPrefs);
+        driver = new FirefoxDriver();
+    }
+
+    private static void initChrome() {
         ChromeOptions options = new ChromeOptions();
         LoggingPreferences logPrefs = new LoggingPreferences();
         logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
         options.setCapability("goog:loggingPrefs", logPrefs);
-
-        if (browserName.equalsIgnoreCase("chrome")) {
-            driver = new ChromeDriver(options);
-        } else if (browserName.equalsIgnoreCase("firefox")) {
-            driver = new FirefoxDriver();
-        } else if (browserName.equalsIgnoreCase("edge")) {
-            driver = new EdgeDriver();
-        } else {
-            throw new RuntimeException("Invalid Browser Type");
-        }
-        driver.manage().window().maximize();
-        setDriverTimeoutAndWait();
-
-        action = new Actions(driver);
-
-        ManagePages.initVicariusPages();
+        driver = new ChromeDriver(options);
     }
 
     // Take a screenshot for Allure report & save a png file
