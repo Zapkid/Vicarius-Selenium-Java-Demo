@@ -22,4 +22,10 @@ public class Base {
     protected static pageObjects.ProductPage vicariusProduct;
 
     protected static Proxy seleniumProxy;
+
+    public static final int SLEEP_TIMEOUT = 500;
+
+    // Vicarius
+    public static final String VALID_EMAIL = "admin@vicarius.io";
+    public static final String API_SIGN_IN_URL = "https://www.vicarius.io/api/v2/forms/signin";
 }

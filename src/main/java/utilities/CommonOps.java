@@ -1,6 +1,8 @@
 package utilities;
 
 import io.qameta.allure.Attachment;
+import workflows.WebFlows;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -12,6 +14,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.*;
 import java.io.File;
 import java.io.IOException;
@@ -21,6 +25,8 @@ import java.util.Date;
 import java.util.logging.Level;
 
 public class CommonOps extends Base {
+
+    public static final Logger LOG = LoggerFactory.getLogger(CommonOps.class);
 
     // Initiate Parameters from Suite XML
     // @BeforeClass

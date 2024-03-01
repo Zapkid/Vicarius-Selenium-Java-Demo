@@ -2,6 +2,7 @@ package vicarius;
 
 import extensions.UIActions;
 import extensions.Verifications;
+import io.netty.handler.codec.http.HttpResponseStatus;
 import io.qameta.allure.Description;
 import utilities.CommonOps;
 import workflows.WebFlows;
@@ -29,11 +30,17 @@ public class SignInPageTests extends CommonOps {
 
         // TODO - Extract all hard-coded values to json test data file
 
+        /**
+         * Tests a valid sign in flow.
+         * Calls the signIn() workflow with valid credentials.
+         * Verifies the notification text, submit button state,
+         * and API response after sign in.
+         */
         @Test(description = "Valid Sign in", priority = 1)
-        @Description("Valid Sign In flow")
+        @Description("Valid Sign In flow, API response success status code 200 OK")
         public void VicariusValidSignIn() {
 
-                WebFlows.signIn("admin@vicarius.io");
+                WebFlows.signIn(VALID_EMAIL);
 
                 // Verify notification text
                 Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
@@ -43,11 +50,10 @@ public class SignInPageTests extends CommonOps {
                 Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), false);
 
                 // Verify sign in API response
-                Verifications.verifyApiResponse("https://www.vicarius.io/api/v2/forms/signin", "200");
-                // TODO - Complete test flow using Gmail API - needs email credentials
+                Verifications.verifyApiResponse(API_SIGN_IN_URL, HttpResponseStatus.OK);
         }
 
-        // Note: Can easily be split into multiple tests - kept in 1 test since no
+        // Note: Can easily be split into multiple tests - kept in one test since no
         // functionality is being tested.
         @Test(description = "Sign in page elements visibility, text & style", priority = 3)
         @Description("Elements visible on Sign In page")
@@ -73,7 +79,7 @@ public class SignInPageTests extends CommonOps {
                 Verifications.verifyString(vicariusSignIn.getForgotEmailLink().getAttribute("href"),
                                 "mailto:support@vicarius.io");
 
-                // Verify Email input background-color
+                // Verify Email input initial background-color
                 Verifications.verifyElementCss(vicariusSignIn.getEmailInput().findElement(By.xpath("parent::*")),
                                 "background-color",
                                 "rgba(76, 78, 240, 0.2)");
@@ -142,7 +148,7 @@ public class SignInPageTests extends CommonOps {
                 Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), false);
 
                 // Verify sign in API response
-                Verifications.verifyApiResponse("https://www.vicarius.io/api/v2/forms/signin", "400",
+                Verifications.verifyApiResponse(API_SIGN_IN_URL, HttpResponseStatus.BAD_REQUEST,
                                 "Invalid email address");
         }
 
@@ -216,16 +222,19 @@ public class SignInPageTests extends CommonOps {
                                 "rgba(255, 104, 114, 0.15)");
         }
 
+        // Note - This test only showcases the use of mouse hover on two different
+        // points in order to assert the cursor style has changed. It does not cover the
+        // entire UX of the feature.
         @Test(description = "Mouse Cursor style", priority = 4)
         @Description("Verify Mouse Cursor style effect")
         public void VicariusMouseCursor() {
 
                 // Move mouse to point A - causes style transform change
-                UIActions.mouseHover(vicariusSignIn.getContentHeading(), 500);
+                UIActions.mouseHover(vicariusSignIn.getContentHeading(), SLEEP_TIMEOUT);
                 String pointA = vicariusSignIn.getCursor().getAttribute("style");
 
                 // Move mouse to point B - causes style transform change
-                UIActions.mouseHover(vicariusSignIn.getLogo(), 500);
+                UIActions.mouseHover(vicariusSignIn.getLogo(), SLEEP_TIMEOUT);
                 String pointB = vicariusSignIn.getCursor().getAttribute("style");
 
                 // Verify cursor style has changed
@@ -243,11 +252,10 @@ public class SignInPageTests extends CommonOps {
 
                 // Open & close chat
                 Verifications.verifyElementIsVisible(vicariusSignIn.getChatWidgetLauncher());
-                UIActions.click(vicariusSignIn.getChatWidgetLauncher(), 500);
+                UIActions.click(vicariusSignIn.getChatWidgetLauncher(), SLEEP_TIMEOUT);
                 Verifications.verifyElementIsVisible(vicariusSignIn.getLiveChatWidget());
-                UIActions.click(vicariusSignIn.getChatWidgetLauncher(), 500);
+                UIActions.click(vicariusSignIn.getChatWidgetLauncher(), SLEEP_TIMEOUT);
                 Verifications.verifyElementNotFound("#live-chat-widget");
-
         }
 
 }

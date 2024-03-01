@@ -57,7 +57,7 @@ public class UIActions extends CommonOps {
         wait.until((ExpectedConditions.visibilityOf(elem)));
         elem.sendKeys(text);
         try {
-            Thread.sleep(500);
+            Thread.sleep(SLEEP_TIMEOUT);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

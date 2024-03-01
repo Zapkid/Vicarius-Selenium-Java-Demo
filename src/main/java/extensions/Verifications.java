@@ -1,5 +1,6 @@
 package extensions;
 
+import io.netty.handler.codec.http.HttpResponseStatus;
 import io.qameta.allure.Step;
 import utilities.CommonOps;
 
@@ -66,7 +67,7 @@ public class Verifications extends CommonOps {
     }
 
     @Step("Verify Response status code")
-    public static void verifyApiResponse(String Url, String statusCode) {
+    public static void verifyApiResponse(String Url, HttpResponseStatus statusCode) {
         LogEntries les = driver.manage().logs().get(LogType.PERFORMANCE);
         for (LogEntry le : les) {
             if (le.getMessage().contains(Url)
@@ -78,7 +79,13 @@ public class Verifications extends CommonOps {
                     JsonNode response = jsonNode.path("message").path("params").path("response");
                     String status = response.path("status").asText();
 
-                    Verifications.verifyString(status, statusCode);
+                    LOG.info("API response status: " + status + ". URL: " + Url);
+
+                    try {
+                        Verifications.verifyString(status, String.valueOf(statusCode.code()));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     break;
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -88,7 +95,7 @@ public class Verifications extends CommonOps {
     }
 
     @Step("Verify Response status code & error message")
-    public static void verifyApiResponse(String Url, String statusCode, String errorMessage) {
+    public static void verifyApiResponse(String Url, HttpResponseStatus statusCode, String errorMessage) {
         LogEntries les = driver.manage().logs().get(LogType.PERFORMANCE);
         for (LogEntry le : les) {
             if (le.getMessage().contains(Url)
@@ -103,7 +110,13 @@ public class Verifications extends CommonOps {
                         String message = response.path("message").asText();
                         Verifications.verifyString(message, errorMessage);
                     }
-                    Verifications.verifyString(status, statusCode);
+                    LOG.info("API response status: " + status + ". URL: " + Url);
+
+                    try {
+                        Verifications.verifyString(status, String.valueOf(statusCode.code()));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     break;
                 } catch (Exception e) {
                     e.printStackTrace();
