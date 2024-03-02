@@ -3,6 +3,7 @@ package extensions;
 import io.qameta.allure.Step;
 import utilities.CommonOps;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -77,6 +78,13 @@ public class UIActions extends CommonOps {
     @Step("Mouse Hover Element & Click")
     public static void mouseHoverClick(WebElement element) {
         action.moveToElement(element).click().build().perform();
+    }
+
+    @Step("Scroll Element Into view")
+    public static void scrollIntoView(WebElement element, long sleepTimeMillis) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+        sleep(sleepTimeMillis);
     }
 
 }

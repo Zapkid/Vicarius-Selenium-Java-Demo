@@ -29,6 +29,7 @@ Tests are executed across core user flows like sign up, sign in, and product int
 ## Running Tests
 Run `mvn -P Web` to run the Web tests suite.
 Once the browser opens, tests will execute across the Vicarius.io webpages under test, Logs will be recorded to the terminal & test results will be recorded in the `allure-results` folder.
+More test suites can be added to the project by creating new profiles in the `pom.xml` file, and configuring the test suite in a new TestNG xml file.
 
 ## Vicarius pages tested
 
@@ -81,6 +82,10 @@ Screenshots and video recordings of failed tests are also available to help with
 * Parameterize selectors to reduce duplication across page object classes
 * Add API testing for backend validation
 * Add Mobile testing
+* Automate winning Invaders game :)
+
+![Invaders win](assets/Invaders%20win.png "Vicarius Invaders win")
+
 
 ## Contributing
 
