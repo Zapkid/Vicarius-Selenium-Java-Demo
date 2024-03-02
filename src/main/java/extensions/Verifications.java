@@ -126,6 +126,7 @@ public class Verifications extends CommonOps {
         }
     }
 
+    @Step("Verify Sign in")
     public static void verifySignIn(HttpResponseStatus responseStatusCode) {
         // Verify notification text
         Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
@@ -138,6 +139,7 @@ public class Verifications extends CommonOps {
         Verifications.verifyApiResponse(API_SIGN_IN_URL, responseStatusCode);
     }
 
+    @Step("Verify Sign in")
     public static void verifySignIn(HttpResponseStatus responseStatusCode, String errorMessage) {
         // Verify notification text
         Verifications.verifyElementText(vicariusSignIn.getNotificationContent(),
@@ -151,6 +153,7 @@ public class Verifications extends CommonOps {
                 errorMessage);
     }
 
+    @Step("Verify Invalid Sign in")
     public static void verifySignInErrorAndNotificationTexts() {
         Verifications.verifyStringContains(vicariusSignIn.getErrorMessage().getText(),
                 "Invalid email address");

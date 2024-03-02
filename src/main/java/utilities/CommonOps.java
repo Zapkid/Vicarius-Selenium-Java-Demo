@@ -1,6 +1,8 @@
 package utilities;
 
 import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -51,13 +53,14 @@ public class CommonOps extends Base {
     @BeforeMethod
     public void beforeMethod(Method method) {
 
-        driver.get(url);
-
         try {
             MonteScreenRecorder.startRecord(method.getName());
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        driver.get(url);
+
     }
 
     // Initiate Browser, Navigate to URL, Actions & Wait
@@ -136,10 +139,21 @@ public class CommonOps extends Base {
         }
     }
 
+    @Step("Switch to iframe")
     public static void switchToIFrame(String iframeCssSelector) {
         WebElement iframe = driver.findElement(By.cssSelector(iframeCssSelector));
         Verifications.verifyElementIsVisible(iframe);
         LOG.info("Switching to iframe: " + iframeCssSelector);
         driver.switchTo().frame(iframe);
+    }
+
+    @Step("Get element parent")
+    public static WebElement getElementParent(WebElement element) {
+        return element.findElement(By.xpath("parent::*"));
+    }
+
+    @Step("Get element following-sibling")
+    public static WebElement getElementFollowingSibling(WebElement element) {
+        return element.findElement(By.xpath("following-sibling::*"));
     }
 }

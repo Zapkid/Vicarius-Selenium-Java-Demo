@@ -1,0 +1,10 @@
+{
+    "logoText": "Vicarius",
+    "features": {
+        "vulnDiscovery" : "Vuln Discovery",
+        "vulnPrioritization" : "Vuln Prioritization",
+        "vulnRemediation" : "Vuln Remediation",
+        "automation" : "Automation"
+    },
+    "faq": "Frequently Asked Questions →"
+}

@@ -3,7 +3,21 @@
 # Vicarius.io Selenium Java Testing Demo
 
 ## Introduction
-This project uses Selenium with the TestNG framework in a Page Object Model (POM) design pattern. The project tests the UI, functionality and network traffic associated with user actions of the vicarius.io website. 
+This project demonstrates UI & functionality testing of the Vicarius.io website using Selenium, TestNG, and Allure frameworks.The project is built using the Page Object Model (POM) design pattern for maintainable and scalable test automation.
+
+The framework includes the following layers:
+
+* Pages - Contains page object classes that represent web pages under test. Encapsulates access to page elements.
+
+* Tests - Contains test classes with test methods to validate functionality.
+
+* Extensions - Contains reusable classes for common test actions and assertions.
+
+* Utilities - Contains helper classes for setup, driver management, listeners etc.
+
+* Workflows - Contains methods to execute common end-to-end user workflows.
+
+Tests are executed across core user flows like sign up, sign in, and product interactions. The framework verifies UI elements, texts, network calls to validate functionality and business logic.
 
 ## Setup
 1. **Prerequisites**: Ensure you have [Java JDK 8+](https://www.oracle.com/il-en/java/technologies/downloads/#jdk21-windows), [Apache Maven 3.6+](https://maven.apache.org/download.cgi) & **Optional** [Allure Report](https://github.com/allure-framework/allure2/releases) properly installed on your machine. Ensure Environment variables are set up for the following:
@@ -13,6 +27,7 @@ This project uses Selenium with the TestNG framework in a Page Object Model (POM
 3. **Install dependencies & Run tests**: Run `mvn clean install -P Web` to install all necessary dependencies to your local machine & run the Web tests suite.
 
 ## Running Tests
+Run `mvn -P Web` to run the Web tests suite.
 Once the browser opens, tests will execute across the Vicarius.io webpages under test, Logs will be recorded to the terminal & test results will be recorded in the `allure-results` folder.
 
 ## Vicarius pages tested
@@ -33,28 +48,31 @@ Screenshots and video recordings of failed tests are also available to help with
 ## Test Coverage
 #### Sign In Page Tests:
 * Tests valid, invalid, empty, and unrecognized email sign in flows
-* Verifies sign in error texts, notifications, input field styles
+* Verifies sign in error texts, notifications, input field style change
 * Checks elements visibility, text, styles on sign in page
-* Tests mouse cursor style changes
-* Opens and closes chat widget
-
+* Checks Features and FAQ content
+  
 #### Sign Up Page Tests:
-* Tests valid sign up flow
+* Tests valid sign up flow including password complexity requirements
+* Verifies sign up error texts, notifications, input field style change
 * Verifies elements visibility, text, styles on sign up page
-* Checks features and FAQ content
-* Tests mouse cursor style changes
-* Opens and closes chat widget
+* Checks Features and FAQ content
 
 #### Product Page Tests:
 * 
+
+
+#### Overlay Tests:
+* Opens and closes chat widget
+* Tests mouse cursor style changes on move
 
 ##### TODOs:
 * Improve mouse cursor test to cover full UX
 * Add chat widget interactions
 * Fix - asserting on network traffic on different browsers than chrome
+* Expand test coverage on Product page
 * **Add E2E test to sign up with a Gmail account, access the verification link with Gmail API & complete a successful sign in.**
   
-
 ## Future Improvements
 * Integrate with CI/CD pipeline for automated testing
 * Report summary sent to Slack on a dedicated channel
@@ -63,3 +81,15 @@ Screenshots and video recordings of failed tests are also available to help with
 * Parameterize selectors to reduce duplication across page object classes
 * Add API testing for backend validation
 * Add Mobile testing
+
+## Contributing
+
+Contributions to the project are welcome! To contribute:
+
+1. Fork the repository
+2. Create a new branch
+3. Make changes and test
+4. Submit a pull request
+
+### Estimated time worked on the project (hrs):
+~ 20-25 hrs

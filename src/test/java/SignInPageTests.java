@@ -1,12 +1,9 @@
-
-
 import extensions.UIActions;
 import extensions.Verifications;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import io.qameta.allure.Description;
 import utilities.CommonOps;
 import workflows.WebFlows;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
@@ -58,12 +55,13 @@ public class SignInPageTests extends CommonOps {
                                 "mailto:" + SUPPORT_EMAIL);
 
                 // Verify Email input initial background-color
-                Verifications.verifyElementCss(vicariusSignIn.getEmailInput().findElement(By.xpath("parent::*")),
-                                "background-color",
-                                "rgba(76, 78, 240, 0.2)");
+                Verifications.verifyElementCss(getElementParent(vicariusSignIn.getEmailInput()), "background-color",
+                                INPUT_COLOR);
 
-                // Verify login button enabled
+                // Verify login button enabled & text
                 Verifications.verifyBoolean(vicariusSignIn.getSubmitButton().isEnabled(), true);
+                Verifications.verifyElementText(vicariusSignIn.getSubmitButton(), "Login");
+
         }
 
         @Test(description = "Sign in page option", priority = 2)
@@ -146,9 +144,9 @@ public class SignInPageTests extends CommonOps {
                                 SIGN_UP_URL);
 
                 // Verify email input background-color changed to red
-                Verifications.verifyElementCss(vicariusSignIn.getEmailInput().findElement(By.xpath("parent::*")),
+                Verifications.verifyElementCss(getElementParent(vicariusSignIn.getEmailInput()),
                                 "background-color",
-                                "rgba(255, 104, 114, 0.15)");
+                                ERROR_RED_COLOR);
         }
 
         @Test(description = "Empty Sign in", priority = 2)
@@ -172,46 +170,9 @@ public class SignInPageTests extends CommonOps {
                                 SIGN_UP_URL);
 
                 // Verify email input background-color changed to red
-                Verifications.verifyElementCss(vicariusSignIn.getEmailInput().findElement(By.xpath("parent::*")),
+                Verifications.verifyElementCss(getElementParent(vicariusSignIn.getEmailInput()),
                                 "background-color",
-                                "rgba(255, 104, 114, 0.15)");
-        }
-
-        // Note - This test only showcases the use of mouse hover on two different
-        // points in order to assert the cursor style has changed. It does not cover the
-        // entire UX of the feature.
-        @Test(description = "Mouse Cursor style", priority = 4)
-        @Description("Verify Mouse Cursor style effect")
-        public void VicariusMouseCursor() {
-
-                // Move mouse to point A - causes style transform change
-                UIActions.mouseHover(vicariusSignIn.getContentHeading(), SLEEP_TIMEOUT);
-                String pointA = vicariusSignIn.getCursor().getAttribute("style");
-                LOG.info("Cursor style: " + pointA);
-
-                // Move mouse to point B - causes style transform change
-                UIActions.mouseHover(vicariusSignIn.getLogo(), SLEEP_TIMEOUT);
-                String pointB = vicariusSignIn.getCursor().getAttribute("style");
-                LOG.info("Cursor style: " + pointB);
-
-                // Verify cursor style has changed
-                Verifications.verifyBoolean(pointA.equals(pointB), false);
-        }
-
-        // TODO - Add chat interactions to the test
-        @Test(description = "Chat Widget", priority = 4)
-        @Description("Verify Chat Widget opens & closes")
-        public void VicariusChatWidget() {
-
-                // Switch to chat widget iframe
-                CommonOps.switchToIFrame(CHAT_IFRAME);
-
-                // Open & close chat
-                WebFlows.openChat();
-                WebFlows.closeChat();
-
+                                ERROR_RED_COLOR);
         }
 
 }
-
-        // TODO - Extract all hard-coded values to json test data file

@@ -13,14 +13,14 @@ public class Base {
 
     protected static String browserName;
     protected static String url;
-    public static final long TIMEOUT = 10;
+    protected static final long TIMEOUT = 10;
     protected static Duration timeout = Duration.ofSeconds(TIMEOUT);
 
     protected static pageObjects.SignInPage vicariusSignIn;
     protected static pageObjects.SignUpPage vicariusSignUp;
     protected static pageObjects.ProductPage vicariusProduct;
 
-    public static final int SLEEP_TIMEOUT = 500;
+    public static final int SLEEP_TIMEOUT = 1_000;
 
     // Vicarius
     public static final String SIGN_IN_URL = "https://www.vicarius.io/sign/in";
@@ -36,4 +36,16 @@ public class Base {
             { "Vuln Prioritization", "Focus on risks that have real potential for exploitation" },
             { "Vuln Remediation", "Don’t just find your flaws, fix them." },
             { "Automation", "Threats don’t take time off, but you can." } };
+
+    public static final String INPUT_COLOR = "rgba(76, 78, 240, 0.2)";
+    public static final String ERROR_RED_COLOR = "rgba(255, 104, 114, 0.15)";
+
+    public static final String[] passwordRules = {"8 - 30 characters", "Lowercase letter", "Uppercase letter", "Number", "Special character"};
+    public static final int PASSWORD_RULE_LENGTH_INDEX = 0;
+    public static final int PASSWORD_RULE_LOWERCASE_INDEX = 1;
+    public static final int PASSWORD_RULE_UPPERCASE_INDEX = 2;
+    public static final int PASSWORD_RULE_NUMBER_INDEX = 3;
+    public static final int PASSWORD_RULE_SPECIAL_CHAR_INDEX = 4;
+
+
 }
