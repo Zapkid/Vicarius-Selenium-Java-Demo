@@ -68,8 +68,13 @@ public class SignUpPageTests extends CommonOps {
                 // Verify Password help label text
                 Verifications.verifyElementText(vicariusSignUp.getPasswordHelpLabel(), "Your password must contain:");
 
-                // Verify all Password help rules have is-invalid class
                 for (int i = 0; i < passwordRules.length; i++) {
+                        // Verify Password help rules
+                        Verifications.verifyElementText(
+                                        vicariusSignUp.getPasswordHelpRules().get(i),
+                                        passwordRules[i]);
+
+                        // Verify Password help rules have is-invalid class
                         Verifications.verifyString(
                                         vicariusSignUp.getPasswordHelpRules().get(i).getAttribute("class"),
                                         "tag is-invalid");
@@ -194,7 +199,7 @@ public class SignUpPageTests extends CommonOps {
                 UIActions.waitAndType(vicariusSignUp.getPasswordInput(), "d");
                 Verifications.verifyElementNotFound(".password-help");
 
-                // Increasing entered password to max length
+                // Increasing entered password to max allowed length
                 for (int i = 0; i < 22; i++) {
                         UIActions.type(vicariusSignUp.getPasswordInput(), "e");
                 }

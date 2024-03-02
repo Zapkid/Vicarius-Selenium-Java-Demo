@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-02T11:54:07 IST" name="Web Suite" finished-at="2024-03-02T11:56:31 IST" duration-ms="143758">
+  <suite started-at="2024-03-02T14:13:50 IST" name="Web Suite" finished-at="2024-03-02T14:16:04 IST" duration-ms="133812">
     <groups>
     </groups>
-    <test started-at="2024-03-02T11:54:07 IST" name="Sign In Page Tests" finished-at="2024-03-02T11:54:58 IST" duration-ms="50208">
+    <test started-at="2024-03-02T14:13:50 IST" name="Sign In Page Tests" finished-at="2024-03-02T14:14:37 IST" duration-ms="47045">
       <class name="SignInPageTests">
-        <test-method is-config="true" signature="startSession(java.lang.String,java.lang.String)[pri:0, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:08 IST" name="startSession" finished-at="2024-03-02T11:54:10 IST" duration-ms="2360" status="PASS">
+        <test-method is-config="true" signature="startSession(java.lang.String,java.lang.String)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:13:50 IST" name="startSession" finished-at="2024-03-02T14:13:52 IST" duration-ms="2176" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSession -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:10 IST" name="beforeMethod" finished-at="2024-03-02T11:54:11 IST" duration-ms="1329" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:13:52 IST" name="beforeMethod" finished-at="2024-03-02T14:13:55 IST" duration-ms="2926" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,11 +34,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusValidSignIn()[pri:1, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:11 IST" name="VicariusValidSignIn" description="Valid Sign in" finished-at="2024-03-02T11:54:16 IST" duration-ms="4941" status="PASS">
+        <test-method signature="VicariusValidSignIn()[pri:1, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:13:56 IST" name="VicariusValidSignIn" description="Valid Sign in" finished-at="2024-03-02T14:13:58 IST" duration-ms="2351" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusValidSignIn -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:17 IST" name="beforeMethod" finished-at="2024-03-02T11:54:19 IST" duration-ms="2073" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:13:58 IST" name="beforeMethod" finished-at="2024-03-02T14:14:00 IST" duration-ms="1624" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -49,11 +49,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusEmptySignIn()[pri:2, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:19 IST" name="VicariusEmptySignIn" description="Empty Sign in" finished-at="2024-03-02T11:54:32 IST" duration-ms="13177" status="PASS">
+        <test-method signature="VicariusEmptySignIn()[pri:2, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:00 IST" name="VicariusEmptySignIn" description="Empty Sign in" finished-at="2024-03-02T14:14:13 IST" duration-ms="12932" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusEmptySignIn -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:32 IST" name="beforeMethod" finished-at="2024-03-02T11:54:33 IST" duration-ms="1182" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:13 IST" name="beforeMethod" finished-at="2024-03-02T14:14:15 IST" duration-ms="1485" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -64,11 +64,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusInvalidSignIn()[pri:2, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:33 IST" name="VicariusInvalidSignIn" description="Invalid Email Sign in" finished-at="2024-03-02T11:54:46 IST" duration-ms="13323" status="PASS">
+        <test-method signature="VicariusInvalidSignIn()[pri:2, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:15 IST" name="VicariusInvalidSignIn" description="Invalid Email Sign in" finished-at="2024-03-02T14:14:27 IST" duration-ms="12954" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusInvalidSignIn -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:47 IST" name="beforeMethod" finished-at="2024-03-02T11:54:48 IST" duration-ms="1387" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:28 IST" name="beforeMethod" finished-at="2024-03-02T14:14:29 IST" duration-ms="1637" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -79,11 +79,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusMissingEmailSignIn()[pri:2, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:48 IST" name="VicariusMissingEmailSignIn" description="Email not found Sign In" finished-at="2024-03-02T11:54:50 IST" duration-ms="2070" status="PASS">
+        <test-method signature="VicariusMissingEmailSignIn()[pri:2, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:29 IST" name="VicariusMissingEmailSignIn" description="Email not found Sign In" finished-at="2024-03-02T14:14:31 IST" duration-ms="1672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusMissingEmailSignIn -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:50 IST" name="beforeMethod" finished-at="2024-03-02T11:54:52 IST" duration-ms="1287" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:31 IST" name="beforeMethod" finished-at="2024-03-02T14:14:32 IST" duration-ms="1269" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -94,11 +94,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusOption()[pri:2, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:52 IST" name="VicariusOption" description="Sign in page option" finished-at="2024-03-02T11:54:52 IST" duration-ms="630" status="PASS">
+        <test-method signature="VicariusOption()[pri:2, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:32 IST" name="VicariusOption" description="Sign in page option" finished-at="2024-03-02T14:14:33 IST" duration-ms="407" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusOption -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:52 IST" name="beforeMethod" finished-at="2024-03-02T11:54:54 IST" duration-ms="1552" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:33 IST" name="beforeMethod" finished-at="2024-03-02T14:14:34 IST" duration-ms="1473" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -109,11 +109,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusFeaturesAndFAQ()[pri:3, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:54 IST" name="VicariusFeaturesAndFAQ" description="Sign in page features &amp; FAQ" finished-at="2024-03-02T11:54:55 IST" duration-ms="971" status="PASS">
+        <test-method signature="VicariusFeaturesAndFAQ()[pri:3, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:34 IST" name="VicariusFeaturesAndFAQ" description="Sign in page features &amp; FAQ" finished-at="2024-03-02T14:14:35 IST" duration-ms="702" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusFeaturesAndFAQ -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:55 IST" name="beforeMethod" finished-at="2024-03-02T11:54:56 IST" duration-ms="1337" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:35 IST" name="beforeMethod" finished-at="2024-03-02T14:14:36 IST" duration-ms="1150" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -124,19 +124,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusUIVisible()[pri:3, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:56 IST" name="VicariusUIVisible" description="Sign in page elements visibility, text &amp; style" finished-at="2024-03-02T11:54:57 IST" duration-ms="1018" status="PASS">
+        <test-method signature="VicariusUIVisible()[pri:3, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:36 IST" name="VicariusUIVisible" description="Sign in page elements visibility, text &amp; style" finished-at="2024-03-02T14:14:37 IST" duration-ms="697" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusUIVisible -->
-        <test-method is-config="true" signature="closeSession()[pri:0, instance:SignInPageTests@4f4c789f]" started-at="2024-03-02T11:54:57 IST" name="closeSession" finished-at="2024-03-02T11:54:58 IST" duration-ms="380" status="PASS">
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:37 IST" name="closeSession" finished-at="2024-03-02T14:14:37 IST" duration-ms="330" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeSession -->
       </class> <!-- SignInPageTests -->
     </test> <!-- Sign In Page Tests -->
-    <test started-at="2024-03-02T11:54:58 IST" name="Sign Up Page Tests" finished-at="2024-03-02T11:56:08 IST" duration-ms="70573">
+    <test started-at="2024-03-02T14:14:37 IST" name="Sign Up Page Tests" finished-at="2024-03-02T14:15:43 IST" duration-ms="65851">
       <class name="SignUpPageTests">
-        <test-method is-config="true" signature="startSession(java.lang.String,java.lang.String)[pri:0, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:54:58 IST" name="startSession" finished-at="2024-03-02T11:54:59 IST" duration-ms="1555" status="PASS">
+        <test-method is-config="true" signature="startSession(java.lang.String,java.lang.String)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:37 IST" name="startSession" finished-at="2024-03-02T14:14:39 IST" duration-ms="1254" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -152,7 +152,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSession -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:54:59 IST" name="beforeMethod" finished-at="2024-03-02T11:55:02 IST" duration-ms="3082" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:39 IST" name="beforeMethod" finished-at="2024-03-02T14:14:39 IST" duration-ms="639" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -163,11 +163,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusValidSignUp()[pri:1, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:55:02 IST" name="VicariusValidSignUp" description="Valid Sign up" finished-at="2024-03-02T11:55:09 IST" duration-ms="6957" status="PASS">
+        <test-method signature="VicariusValidSignUp()[pri:1, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:39 IST" name="VicariusValidSignUp" description="Valid Sign up" finished-at="2024-03-02T14:14:48 IST" duration-ms="8406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusValidSignUp -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:55:10 IST" name="beforeMethod" finished-at="2024-03-02T11:55:10 IST" duration-ms="678" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:48 IST" name="beforeMethod" finished-at="2024-03-02T14:14:50 IST" duration-ms="1911" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -178,11 +178,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusEmptySignUp()[pri:2, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:55:10 IST" name="VicariusEmptySignUp" description="Empty Sign up" finished-at="2024-03-02T11:55:13 IST" duration-ms="2922" status="PASS">
+        <test-method signature="VicariusEmptySignUp()[pri:2, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:50 IST" name="VicariusEmptySignUp" description="Empty Sign up" finished-at="2024-03-02T14:14:51 IST" duration-ms="1537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusEmptySignUp -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:55:13 IST" name="beforeMethod" finished-at="2024-03-02T11:55:15 IST" duration-ms="1330" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:52 IST" name="beforeMethod" finished-at="2024-03-02T14:14:53 IST" duration-ms="1144" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -193,11 +193,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusOption()[pri:2, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:55:15 IST" name="VicariusOption" description="Sign up page option" finished-at="2024-03-02T11:55:15 IST" duration-ms="632" status="PASS">
+        <test-method signature="VicariusOption()[pri:2, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:53 IST" name="VicariusOption" description="Sign up page option" finished-at="2024-03-02T14:14:53 IST" duration-ms="337" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusOption -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:55:15 IST" name="beforeMethod" finished-at="2024-03-02T11:55:17 IST" duration-ms="1441" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:53 IST" name="beforeMethod" finished-at="2024-03-02T14:14:54 IST" duration-ms="1184" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -208,11 +208,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusPasswordMismatch()[pri:2, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:55:17 IST" name="VicariusPasswordMismatch" description="Password Mismatch" finished-at="2024-03-02T11:55:25 IST" duration-ms="8002" status="PASS">
+        <test-method signature="VicariusPasswordMismatch()[pri:2, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:54 IST" name="VicariusPasswordMismatch" description="Password Mismatch" finished-at="2024-03-02T14:15:02 IST" duration-ms="7442" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusPasswordMismatch -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:55:25 IST" name="beforeMethod" finished-at="2024-03-02T11:55:27 IST" duration-ms="1529" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:02 IST" name="beforeMethod" finished-at="2024-03-02T14:15:04 IST" duration-ms="1720" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -223,11 +223,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusPasswordRules()[pri:2, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:55:27 IST" name="VicariusPasswordRules" description="Password Rules" finished-at="2024-03-02T11:56:01 IST" duration-ms="34070" status="PASS">
+        <test-method signature="VicariusPasswordRules()[pri:2, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:04 IST" name="VicariusPasswordRules" description="Password Rules" finished-at="2024-03-02T14:15:38 IST" duration-ms="33913" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusPasswordRules -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:56:01 IST" name="beforeMethod" finished-at="2024-03-02T11:56:04 IST" duration-ms="2471" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:38 IST" name="beforeMethod" finished-at="2024-03-02T14:15:40 IST" duration-ms="1603" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -238,11 +238,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusFeaturesAndFAQ()[pri:3, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:56:04 IST" name="VicariusFeaturesAndFAQ" description="Sign up page features &amp; FAQ" finished-at="2024-03-02T11:56:05 IST" duration-ms="1117" status="PASS">
+        <test-method signature="VicariusFeaturesAndFAQ()[pri:3, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:40 IST" name="VicariusFeaturesAndFAQ" description="Sign up page features &amp; FAQ" finished-at="2024-03-02T14:15:40 IST" duration-ms="853" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusFeaturesAndFAQ -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:56:05 IST" name="beforeMethod" finished-at="2024-03-02T11:56:06 IST" duration-ms="1618" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:40 IST" name="beforeMethod" finished-at="2024-03-02T14:15:42 IST" duration-ms="1350" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -253,19 +253,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusUIVisible()[pri:3, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:56:06 IST" name="VicariusUIVisible" description="Sign up page elements visibility, text &amp; style" finished-at="2024-03-02T11:56:08 IST" duration-ms="1375" status="PASS">
+        <test-method signature="VicariusUIVisible()[pri:3, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:42 IST" name="VicariusUIVisible" description="Sign up page elements visibility, text &amp; style" finished-at="2024-03-02T14:15:43 IST" duration-ms="984" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusUIVisible -->
-        <test-method is-config="true" signature="closeSession()[pri:0, instance:SignUpPageTests@1706a5c9]" started-at="2024-03-02T11:56:08 IST" name="closeSession" finished-at="2024-03-02T11:56:08 IST" duration-ms="460" status="PASS">
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:43 IST" name="closeSession" finished-at="2024-03-02T14:15:43 IST" duration-ms="300" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeSession -->
       </class> <!-- SignUpPageTests -->
     </test> <!-- Sign Up Page Tests -->
-    <test started-at="2024-03-02T11:56:08 IST" name="Overlay Tests" finished-at="2024-03-02T11:56:31 IST" duration-ms="22942">
+    <test started-at="2024-03-02T14:15:43 IST" name="Overlay Tests" finished-at="2024-03-02T14:16:04 IST" duration-ms="20884">
       <class name="OverlayTests">
-        <test-method is-config="true" signature="startSession(java.lang.String,java.lang.String)[pri:0, instance:OverlayTests@68c7ef83]" started-at="2024-03-02T11:56:08 IST" name="startSession" finished-at="2024-03-02T11:56:10 IST" duration-ms="1764" status="PASS">
+        <test-method is-config="true" signature="startSession(java.lang.String,java.lang.String)[pri:0, instance:OverlayTests@778db7c5]" started-at="2024-03-02T14:15:43 IST" name="startSession" finished-at="2024-03-02T14:15:44 IST" duration-ms="1256" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -281,7 +281,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSession -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:OverlayTests@68c7ef83]" started-at="2024-03-02T11:56:10 IST" name="beforeMethod" finished-at="2024-03-02T11:56:13 IST" duration-ms="3067" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:OverlayTests@778db7c5]" started-at="2024-03-02T14:15:44 IST" name="beforeMethod" finished-at="2024-03-02T14:15:45 IST" duration-ms="679" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -292,11 +292,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusChatWidget()[pri:4, instance:OverlayTests@68c7ef83]" started-at="2024-03-02T11:56:13 IST" name="VicariusChatWidget" description="Chat Widget" finished-at="2024-03-02T11:56:26 IST" duration-ms="13129" status="PASS">
+        <test-method signature="VicariusChatWidget()[pri:4, instance:OverlayTests@778db7c5]" started-at="2024-03-02T14:15:45 IST" name="VicariusChatWidget" description="Chat Widget" finished-at="2024-03-02T14:16:00 IST" duration-ms="14518" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusChatWidget -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:OverlayTests@68c7ef83]" started-at="2024-03-02T11:56:26 IST" name="beforeMethod" finished-at="2024-03-02T11:56:28 IST" duration-ms="2010" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:OverlayTests@778db7c5]" started-at="2024-03-02T14:16:00 IST" name="beforeMethod" finished-at="2024-03-02T14:16:01 IST" duration-ms="1641" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -307,11 +307,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusMouseCursor()[pri:4, instance:OverlayTests@68c7ef83]" started-at="2024-03-02T11:56:28 IST" name="VicariusMouseCursor" description="Mouse Cursor style" finished-at="2024-03-02T11:56:31 IST" duration-ms="2588" status="PASS">
+        <test-method signature="VicariusMouseCursor()[pri:4, instance:OverlayTests@778db7c5]" started-at="2024-03-02T14:16:01 IST" name="VicariusMouseCursor" description="Mouse Cursor style" finished-at="2024-03-02T14:16:04 IST" duration-ms="2399" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VicariusMouseCursor -->
-        <test-method is-config="true" signature="closeSession()[pri:0, instance:OverlayTests@68c7ef83]" started-at="2024-03-02T11:56:31 IST" name="closeSession" finished-at="2024-03-02T11:56:31 IST" duration-ms="210" status="PASS">
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:OverlayTests@778db7c5]" started-at="2024-03-02T14:16:04 IST" name="closeSession" finished-at="2024-03-02T14:16:04 IST" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeSession -->
