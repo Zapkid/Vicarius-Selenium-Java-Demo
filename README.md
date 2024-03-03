@@ -1,5 +1,6 @@
 
-![Vicarius](assets/Vicarius%20logo.png "Vicarius Logo")
+![Vicarius](assets/Vicarius%20Banner.png "Vicarius banner")
+
 # Vicarius.io Selenium Java Testing Demo
 
 ## Introduction
@@ -107,3 +108,5 @@ Contributions to the project are welcome! To contribute:
 
 ### Estimated time worked on the project (hrs):
 ~ 25 hrs
+
+![Vicarius](assets/Vicarius%20logo.png "Vicarius Logo")

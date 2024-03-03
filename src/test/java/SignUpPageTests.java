@@ -16,7 +16,7 @@ public class SignUpPageTests extends CommonOps {
         @Description("Tests a valid sign up")
         public void VicariusValidSignUp() {
 
-                WebFlows.signUp("Victor", "Wolf", "vwolf@pack.com", "WolfPack");
+                WebFlows.signUp("Victor", "Wolf", "vwolf@wolfpack.com", "WolfPack");
 
                 // Verify Password inputs toggle visibility icon
                 Verifications.verifyString(
@@ -56,7 +56,7 @@ public class SignUpPageTests extends CommonOps {
         @Description("Tests sign up password rules")
         public void VicariusPasswordRules() {
 
-                WebFlows.signUp("Victor", "Wolf", "vwolf@pack.com", "WolfPack");
+                WebFlows.signUp("Bruce", "Vermont", "bVermont@CatsCo.com", "CatsCo");
 
                 // Trigger password help rules
                 UIActions.click(vicariusSignUp.getPasswordInput(), SLEEP_TIMEOUT);
@@ -234,7 +234,7 @@ public class SignUpPageTests extends CommonOps {
         @Description("Tests sign up password mismatch")
         public void VicariusPasswordMismatch() {
 
-                WebFlows.signUp("Victor", "Wolf", "vwolf@pack.com", "WolfPack");
+                WebFlows.signUp("Hobo", "Cop", "hCop@HoboCop.com", "HoboCop");
 
                 // Trigger password help rules
                 UIActions.click(vicariusSignUp.getPasswordInput(), SLEEP_TIMEOUT);
