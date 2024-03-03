@@ -33,12 +33,6 @@ Run `mvn test -P Web` to run the Web tests suite.
 Once the browser opens, tests will execute across the Vicarius.io webpages under test, Logs will be recorded to the terminal & test results will be recorded in the `allure-results` folder.
 More test suites can be added to the project by creating new profiles in the `pom.xml` file, and configuring the test suite in a new TestNG xml file.
 
-## Vicarius pages tested
-
-* Sign in page ![Vicarius sign in](assets/Vicarius%20sign%20in.png "Vicarius Sign In page")
-* Sign up page ![Vicarius sign up](assets/Vicarius%20sign%20up.png "Vicarius Sign Up page")
-* Product page ![Vicarius product](assets/Vicarius%20product.png "Vicarius Product")
-
 ## Reporting
 The project uses Allure reports, providing a clear and comprehensive representation of test execution output. 
 Run `allure generate --clean` in the terminal to generate a detailed HTML report after test execution in `allure-report` folder.
@@ -54,6 +48,8 @@ Screenshots and video recordings of failed tests are also available to help with
 * Verifies sign in error texts, notifications, input field style change
 * Checks elements visibility, text, styles
 * Checks Features and FAQ content
+
+![Vicarius sign in](assets/Vicarius%20sign%20in.png "Vicarius Sign In page")
   
 #### Sign Up Page Tests:
 * Tests valid sign up flow including password complexity requirements
@@ -61,9 +57,13 @@ Screenshots and video recordings of failed tests are also available to help with
 * Verifies elements visibility, text, styles
 * Checks Features and FAQ content
 
+![Vicarius sign up](assets/Vicarius%20sign%20up.png "Vicarius Sign Up page")
+
 #### Product Page Tests:
 * Verify product demo video is played
 * Verify elements visibility & text
+
+![Vicarius product](assets/Vicarius%20product.png "Vicarius Product")
 
 #### Overlay Tests:
 * Opens and closes chat widget
@@ -108,6 +108,6 @@ Contributions to the project are welcome! To contribute:
 4. Submit a pull request
 
 ### Estimated time worked on the project (hrs):
-~ 25 hrs
+~ 25-30 hrs
 
 ![Vicarius](assets/Vicarius%20logo.png "Vicarius Logo")
