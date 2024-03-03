@@ -21,8 +21,16 @@ public class ProductPageTests extends CommonOps {
 
                 // Verify Header links texts
                 for (int i = 0; i < productPageHeaderLinks.length; i++) {
-                        Verifications.verifyElementText(vicariusProduct.getHeaderLinks().get(i),
+                        WebElement headerLink = vicariusProduct.getHeaderLinks().get(i);
+
+                        Verifications.verifyElementText(headerLink,
                                         productPageHeaderLinks[i]);
+
+                        // Verify sub navigation on header link hover
+                        if (productPageHeaderLinks[i].startsWith("+")) {
+                                UIActions.hover(headerLink, SLEEP_TIMEOUT);
+                                Verifications.verifyElementIsVisible(vicariusProduct.getSubNav());
+                        }
                 }
 
                 // Verify Header sign in & sign up

@@ -111,6 +111,14 @@ public class ProductPage extends BasePage {
         return headerLinks;
     }
 
+    @FindBy(css = ".sub-nav")
+    private WebElement subNav;
+
+    @Step("Get Sub Nav element")
+    public WebElement getSubNav() {
+        return subNav;
+    }
+
     @FindBy(css = ".download h3")
     private WebElement downloadTitle;
 
