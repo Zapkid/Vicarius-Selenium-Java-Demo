@@ -28,7 +28,8 @@ Tests are executed across core user flows like sign up, sign in, and product int
 3. **Install dependencies & Run tests**: Run `mvn clean install -P Web` to install all necessary dependencies to your local machine & run the Web tests suite.
 
 ## Running Tests
-Run `mvn -P Web` to run the Web tests suite.
+Every test is independent of each other, and can be executed independently.
+Run `mvn test -P Web` to run the Web tests suite.
 Once the browser opens, tests will execute across the Vicarius.io webpages under test, Logs will be recorded to the terminal & test results will be recorded in the `allure-results` folder.
 More test suites can be added to the project by creating new profiles in the `pom.xml` file, and configuring the test suite in a new TestNG xml file.
 
@@ -40,7 +41,7 @@ More test suites can be added to the project by creating new profiles in the `po
 
 ## Reporting
 The project uses Allure reports, providing a clear and comprehensive representation of test execution output. 
-Run `allure generate --clean` in the terminal to generate a HTML report after test execution in `allure-report` folder.
+Run `allure generate --clean` in the terminal to generate a detailed HTML report after test execution in `allure-report` folder.
 
 ![Allure report overview](assets/Allure%20report%20overview.png "Vicarius tests overview")
 ![Allure report test breakdown](assets/Allure%20report%20valid%20sign%20in.png "Vicarius Valid Sign in test breakdown")
