@@ -4,23 +4,19 @@
   <listeners>
     <listener class-name="utilities.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Sign In Page Tests(failed)" verbose="0">
+  <test thread-count="5" name="Product Page Tests(failed)" verbose="0">
     <parameter name="BrowserName" value="chrome"/>
-    <parameter name="URL" value="https://www.vicarius.io/sign/in"/>
+    <parameter name="URL" value="https://www.vicarius.io/product"/>
+    <parameter name="timeout" value="5"/>
     <classes>
-      <class name="SignInPageTests">
+      <class name="ProductPageTests">
         <methods>
-          <include name="VicariusUIVisible"/>
           <include name="beforeMethod"/>
-          <include name="VicariusMissingEmailSignIn"/>
-          <include name="VicariusOption"/>
-          <include name="VicariusEmptySignIn"/>
+          <include name="VicariusProductPageElements"/>
           <include name="closeSession"/>
           <include name="startSession"/>
-          <include name="VicariusValidSignIn"/>
-          <include name="VicariusInvalidSignIn"/>
         </methods>
-      </class> <!-- SignInPageTests -->
+      </class> <!-- ProductPageTests -->
     </classes>
-  </test> <!-- Sign In Page Tests(failed) -->
+  </test> <!-- Product Page Tests(failed) -->
 </suite> <!-- Failed suite [Web Suite] -->

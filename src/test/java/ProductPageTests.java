@@ -2,32 +2,24 @@ import extensions.UIActions;
 import extensions.Verifications;
 import io.qameta.allure.Description;
 import utilities.CommonOps;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 @Listeners(utilities.Listeners.class)
 public class ProductPageTests extends CommonOps {
 
-        @Test(description = "Product page watch demo", priority = 1)
-        @Description("Verify Product page watch demo button opens & plays the video")
-        public void VicariusProductPageWatchDemo() {
-
-                Verifications.verifyElementText(vicariusProduct.getWatchDemo(), "Watch Demo");
-                UIActions.click(vicariusProduct.getWatchDemo(), SLEEP_TIMEOUT);
-
-        }
-
         @Test(description = "Product page elements", priority = 2)
         @Description("Verify Product page elements")
         public void VicariusProductPageElements() {
 
                 // Hover title for cool effect :)
-                UIActions.mouseHover(vicariusProduct.getTitle());
+                UIActions.hover(vicariusProduct.getTitle());
 
                 // Verify Header logo
                 Verifications.verifyElementIsVisible(vicariusProduct.getHeaderLogo());
 
-                // Verify Header links
+                // Verify Header links texts
                 for (int i = 0; i < productPageHeaderLinks.length; i++) {
                         Verifications.verifyElementText(vicariusProduct.getHeaderLinks().get(i),
                                         productPageHeaderLinks[i]);
@@ -52,16 +44,51 @@ public class ProductPageTests extends CommonOps {
                 Verifications.verifyElementIsVisible(vicariusProduct.getScreenVideo());
 
                 // Verify Download PDF
-                // TODO - Verify PDF downloaded
+                // TODO - Add test: Verify PDF downloaded
                 UIActions.scrollIntoView(vicariusProduct.getDownloadTitle(), SLEEP_TIMEOUT);
                 Verifications.verifyElementText(vicariusProduct.getDownloadTitle(), "Download the PDF");
                 Verifications.verifyElementText(vicariusProduct.getDownloadButton(), "Get It Now");
+
+                // Verify Particles Containers
+                for (int i = 0; i < vicariusProduct.getParticlesContainer().size(); i++) {
+                        WebElement particlesContainer = vicariusProduct.getParticlesContainer().get(i);
+                        UIActions.scrollIntoView(particlesContainer, SLEEP_TIMEOUT);
+                        UIActions.hover(particlesContainer, SLEEP_TIMEOUT);
+                        Verifications.verifyElementIsVisible(particlesContainer);
+                }
 
                 // Verify Footer logo
                 UIActions.scrollIntoView(vicariusProduct.getFooterLogo(), SLEEP_TIMEOUT);
                 Verifications.verifyElementIsVisible(vicariusProduct.getFooterLogo());
                 Verifications.verifyElementText(vicariusProduct.getWeAreHiring(), "We're hiring!");
 
+        }
+
+        @Test(description = "Product page watch demo", priority = 1)
+        @Description("Verify Product page watch demo button opens & plays the video")
+        public void VicariusProductPageWatchDemo() {
+
+                Verifications.verifyElementText(vicariusProduct.getWatchDemo(), "Watch Demo");
+                UIActions.click(vicariusProduct.getWatchDemo(), SLEEP_TIMEOUT);
+
+                // Switch to video iframe
+                CommonOps.switchToIFrame(VIDEO_IFRAME);
+
+                // Verify video is playing
+                Verifications.verifyElementIsVisible(vicariusProduct.getVideoPlayingMode());
+
+                // TODO - Fix close video
+
+                // // Verify close video
+                // UIActions.mouseHover(vicariusProduct.getVideoClose(), SLEEP_TIMEOUT);
+                // UIActions.click(vicariusProduct.getVideoClose(), SLEEP_TIMEOUT);
+
+                // // Switch back to default iframe
+                // CommonOps.switchToDefaultIFrame();
+
+                // // Verify video closed
+                // Verifications.verifyElementIsVisible(vicariusProduct.getWatchDemo());
+                // Verifications.verifyElementNotFound(VIDEO_IFRAME);
         }
 
 }

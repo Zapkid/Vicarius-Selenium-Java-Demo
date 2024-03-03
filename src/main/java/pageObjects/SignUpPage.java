@@ -1,9 +1,7 @@
 package pageObjects;
 
 import io.qameta.allure.Step;
-
 import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

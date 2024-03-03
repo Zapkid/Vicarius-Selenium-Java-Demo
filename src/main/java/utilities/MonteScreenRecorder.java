@@ -4,11 +4,9 @@ import org.monte.media.Format;
 import org.monte.media.Registry;
 import org.monte.media.math.Rational;
 import org.monte.screenrecorder.ScreenRecorder;
-
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-
 import static org.monte.media.AudioFormatKeys.EncodingKey;
 import static org.monte.media.AudioFormatKeys.FrameRateKey;
 import static org.monte.media.AudioFormatKeys.KeyFrameIntervalKey;

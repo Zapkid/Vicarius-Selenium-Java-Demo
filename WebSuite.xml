@@ -9,6 +9,7 @@
     <test name="Sign In Page Tests">
         <parameter name="BrowserName" value="chrome" />
         <parameter name="URL" value="https://www.vicarius.io/sign/in" />
+        <parameter name="timeout" value="5" />
         <classes>
             <class name="SignInPageTests"></class>
         </classes>
@@ -17,14 +18,25 @@
     <test name="Sign Up Page Tests">
         <parameter name="BrowserName" value="chrome" />
         <parameter name="URL" value="https://www.vicarius.io/sign/up" />
+        <parameter name="timeout" value="10" />
         <classes>
             <class name="SignUpPageTests"></class>
+        </classes>
+    </test>
+
+    <test name="Product Page Tests">
+        <parameter name="BrowserName" value="chrome" />
+        <parameter name="URL" value="https://www.vicarius.io/product" />
+        <parameter name="timeout" value="5" />
+        <classes>
+            <class name="ProductPageTests"></class>
         </classes>
     </test>
 
     <test name="Overlay Tests">
         <parameter name="BrowserName" value="chrome" />
         <parameter name="URL" value="https://www.vicarius.io/sign/up" />
+        <parameter name="timeout" value="10" />
         <classes>
             <class name="OverlayTests"></class>
         </classes>

@@ -3,19 +3,15 @@ package extensions;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import io.qameta.allure.Step;
 import utilities.CommonOps;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.util.List;
-
 import static org.testng.Assert.*;
 
 public class Verifications extends CommonOps {

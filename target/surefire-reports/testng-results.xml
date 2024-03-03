@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-02T14:13:50 IST" name="Web Suite" finished-at="2024-03-02T14:16:04 IST" duration-ms="133812">
+  <suite started-at="2024-03-03T02:12:06 IST" name="Web Suite" finished-at="2024-03-03T02:12:36 IST" duration-ms="29944">
     <groups>
     </groups>
-    <test started-at="2024-03-02T14:13:50 IST" name="Sign In Page Tests" finished-at="2024-03-02T14:14:37 IST" duration-ms="47045">
-      <class name="SignInPageTests">
-        <test-method is-config="true" signature="startSession(java.lang.String,java.lang.String)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:13:50 IST" name="startSession" finished-at="2024-03-02T14:13:52 IST" duration-ms="2176" status="PASS">
+    <test started-at="2024-03-03T02:12:06 IST" name="Product Page Tests" finished-at="2024-03-03T02:12:36 IST" duration-ms="29944">
+      <class name="ProductPageTests">
+        <test-method is-config="true" signature="startSession(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ProductPageTests@3f1ddac2]" started-at="2024-03-03T02:12:06 IST" name="startSession" finished-at="2024-03-03T02:12:09 IST" duration-ms="2258" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,306 +16,53 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[https://www.vicarius.io/sign/in]]>
+                <![CDATA[https://www.vicarius.io/product]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSession -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:13:52 IST" name="beforeMethod" finished-at="2024-03-02T14:13:55 IST" duration-ms="2926" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:ProductPageTests@3f1ddac2]" started-at="2024-03-03T02:12:09 IST" name="beforeMethod" finished-at="2024-03-03T02:12:10 IST" duration-ms="1461" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void SignInPageTests.VicariusValidSignIn()]]>
+                <![CDATA[public void ProductPageTests.VicariusProductPageWatchDemo()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusValidSignIn()[pri:1, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:13:56 IST" name="VicariusValidSignIn" description="Valid Sign in" finished-at="2024-03-02T14:13:58 IST" duration-ms="2351" status="PASS">
+        <test-method signature="VicariusProductPageWatchDemo()[pri:1, instance:ProductPageTests@3f1ddac2]" started-at="2024-03-03T02:12:11 IST" name="VicariusProductPageWatchDemo" description="Product page watch demo" finished-at="2024-03-03T02:12:15 IST" duration-ms="4405" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VicariusValidSignIn -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:13:58 IST" name="beforeMethod" finished-at="2024-03-02T14:14:00 IST" duration-ms="1624" status="PASS">
+        </test-method> <!-- VicariusProductPageWatchDemo -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:ProductPageTests@3f1ddac2]" started-at="2024-03-03T02:12:15 IST" name="beforeMethod" finished-at="2024-03-03T02:12:17 IST" duration-ms="1823" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void SignInPageTests.VicariusEmptySignIn()]]>
+                <![CDATA[public void ProductPageTests.VicariusProductPageElements()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusEmptySignIn()[pri:2, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:00 IST" name="VicariusEmptySignIn" description="Empty Sign in" finished-at="2024-03-02T14:14:13 IST" duration-ms="12932" status="PASS">
+        <test-method signature="VicariusProductPageElements()[pri:2, instance:ProductPageTests@3f1ddac2]" started-at="2024-03-03T02:12:17 IST" name="VicariusProductPageElements" description="Product page elements" finished-at="2024-03-03T02:12:36 IST" duration-ms="19034" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VicariusEmptySignIn -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:13 IST" name="beforeMethod" finished-at="2024-03-02T14:14:15 IST" duration-ms="1485" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void SignInPageTests.VicariusInvalidSignIn()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusInvalidSignIn()[pri:2, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:15 IST" name="VicariusInvalidSignIn" description="Invalid Email Sign in" finished-at="2024-03-02T14:14:27 IST" duration-ms="12954" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusInvalidSignIn -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:28 IST" name="beforeMethod" finished-at="2024-03-02T14:14:29 IST" duration-ms="1637" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void SignInPageTests.VicariusMissingEmailSignIn()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusMissingEmailSignIn()[pri:2, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:29 IST" name="VicariusMissingEmailSignIn" description="Email not found Sign In" finished-at="2024-03-02T14:14:31 IST" duration-ms="1672" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusMissingEmailSignIn -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:31 IST" name="beforeMethod" finished-at="2024-03-02T14:14:32 IST" duration-ms="1269" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void SignInPageTests.VicariusOption()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusOption()[pri:2, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:32 IST" name="VicariusOption" description="Sign in page option" finished-at="2024-03-02T14:14:33 IST" duration-ms="407" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusOption -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:33 IST" name="beforeMethod" finished-at="2024-03-02T14:14:34 IST" duration-ms="1473" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void SignInPageTests.VicariusFeaturesAndFAQ()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusFeaturesAndFAQ()[pri:3, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:34 IST" name="VicariusFeaturesAndFAQ" description="Sign in page features &amp; FAQ" finished-at="2024-03-02T14:14:35 IST" duration-ms="702" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusFeaturesAndFAQ -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:35 IST" name="beforeMethod" finished-at="2024-03-02T14:14:36 IST" duration-ms="1150" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void SignInPageTests.VicariusUIVisible()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusUIVisible()[pri:3, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:36 IST" name="VicariusUIVisible" description="Sign in page elements visibility, text &amp; style" finished-at="2024-03-02T14:14:37 IST" duration-ms="697" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusUIVisible -->
-        <test-method is-config="true" signature="closeSession()[pri:0, instance:SignInPageTests@3ece1e79]" started-at="2024-03-02T14:14:37 IST" name="closeSession" finished-at="2024-03-02T14:14:37 IST" duration-ms="330" status="PASS">
+        </test-method> <!-- VicariusProductPageElements -->
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:ProductPageTests@3f1ddac2]" started-at="2024-03-03T02:12:36 IST" name="closeSession" finished-at="2024-03-03T02:12:36 IST" duration-ms="351" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeSession -->
-      </class> <!-- SignInPageTests -->
-    </test> <!-- Sign In Page Tests -->
-    <test started-at="2024-03-02T14:14:37 IST" name="Sign Up Page Tests" finished-at="2024-03-02T14:15:43 IST" duration-ms="65851">
-      <class name="SignUpPageTests">
-        <test-method is-config="true" signature="startSession(java.lang.String,java.lang.String)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:37 IST" name="startSession" finished-at="2024-03-02T14:14:39 IST" duration-ms="1254" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://www.vicarius.io/sign/up]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSession -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:39 IST" name="beforeMethod" finished-at="2024-03-02T14:14:39 IST" duration-ms="639" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void SignUpPageTests.VicariusValidSignUp()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusValidSignUp()[pri:1, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:39 IST" name="VicariusValidSignUp" description="Valid Sign up" finished-at="2024-03-02T14:14:48 IST" duration-ms="8406" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusValidSignUp -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:48 IST" name="beforeMethod" finished-at="2024-03-02T14:14:50 IST" duration-ms="1911" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void SignUpPageTests.VicariusEmptySignUp()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusEmptySignUp()[pri:2, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:50 IST" name="VicariusEmptySignUp" description="Empty Sign up" finished-at="2024-03-02T14:14:51 IST" duration-ms="1537" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusEmptySignUp -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:52 IST" name="beforeMethod" finished-at="2024-03-02T14:14:53 IST" duration-ms="1144" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void SignUpPageTests.VicariusOption()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusOption()[pri:2, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:53 IST" name="VicariusOption" description="Sign up page option" finished-at="2024-03-02T14:14:53 IST" duration-ms="337" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusOption -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:53 IST" name="beforeMethod" finished-at="2024-03-02T14:14:54 IST" duration-ms="1184" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void SignUpPageTests.VicariusPasswordMismatch()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusPasswordMismatch()[pri:2, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:14:54 IST" name="VicariusPasswordMismatch" description="Password Mismatch" finished-at="2024-03-02T14:15:02 IST" duration-ms="7442" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusPasswordMismatch -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:02 IST" name="beforeMethod" finished-at="2024-03-02T14:15:04 IST" duration-ms="1720" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void SignUpPageTests.VicariusPasswordRules()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusPasswordRules()[pri:2, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:04 IST" name="VicariusPasswordRules" description="Password Rules" finished-at="2024-03-02T14:15:38 IST" duration-ms="33913" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusPasswordRules -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:38 IST" name="beforeMethod" finished-at="2024-03-02T14:15:40 IST" duration-ms="1603" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void SignUpPageTests.VicariusFeaturesAndFAQ()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusFeaturesAndFAQ()[pri:3, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:40 IST" name="VicariusFeaturesAndFAQ" description="Sign up page features &amp; FAQ" finished-at="2024-03-02T14:15:40 IST" duration-ms="853" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusFeaturesAndFAQ -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:40 IST" name="beforeMethod" finished-at="2024-03-02T14:15:42 IST" duration-ms="1350" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void SignUpPageTests.VicariusUIVisible()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusUIVisible()[pri:3, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:42 IST" name="VicariusUIVisible" description="Sign up page elements visibility, text &amp; style" finished-at="2024-03-02T14:15:43 IST" duration-ms="984" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusUIVisible -->
-        <test-method is-config="true" signature="closeSession()[pri:0, instance:SignUpPageTests@7a8136b3]" started-at="2024-03-02T14:15:43 IST" name="closeSession" finished-at="2024-03-02T14:15:43 IST" duration-ms="300" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeSession -->
-      </class> <!-- SignUpPageTests -->
-    </test> <!-- Sign Up Page Tests -->
-    <test started-at="2024-03-02T14:15:43 IST" name="Overlay Tests" finished-at="2024-03-02T14:16:04 IST" duration-ms="20884">
-      <class name="OverlayTests">
-        <test-method is-config="true" signature="startSession(java.lang.String,java.lang.String)[pri:0, instance:OverlayTests@778db7c5]" started-at="2024-03-02T14:15:43 IST" name="startSession" finished-at="2024-03-02T14:15:44 IST" duration-ms="1256" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://www.vicarius.io/sign/up]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSession -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:OverlayTests@778db7c5]" started-at="2024-03-02T14:15:44 IST" name="beforeMethod" finished-at="2024-03-02T14:15:45 IST" duration-ms="679" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void OverlayTests.VicariusChatWidget()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusChatWidget()[pri:4, instance:OverlayTests@778db7c5]" started-at="2024-03-02T14:15:45 IST" name="VicariusChatWidget" description="Chat Widget" finished-at="2024-03-02T14:16:00 IST" duration-ms="14518" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusChatWidget -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:OverlayTests@778db7c5]" started-at="2024-03-02T14:16:00 IST" name="beforeMethod" finished-at="2024-03-02T14:16:01 IST" duration-ms="1641" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void OverlayTests.VicariusMouseCursor()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="VicariusMouseCursor()[pri:4, instance:OverlayTests@778db7c5]" started-at="2024-03-02T14:16:01 IST" name="VicariusMouseCursor" description="Mouse Cursor style" finished-at="2024-03-02T14:16:04 IST" duration-ms="2399" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VicariusMouseCursor -->
-        <test-method is-config="true" signature="closeSession()[pri:0, instance:OverlayTests@778db7c5]" started-at="2024-03-02T14:16:04 IST" name="closeSession" finished-at="2024-03-02T14:16:04 IST" duration-ms="148" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeSession -->
-      </class> <!-- OverlayTests -->
-    </test> <!-- Overlay Tests -->
+      </class> <!-- ProductPageTests -->
+    </test> <!-- Product Page Tests -->
   </suite> <!-- Web Suite -->
 </testng-results>

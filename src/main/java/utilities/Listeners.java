@@ -3,7 +3,6 @@ package utilities;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
 import java.io.File;
 
 public class Listeners extends CommonOps implements ITestListener {

@@ -2,7 +2,6 @@ package extensions;
 
 import io.qameta.allure.Step;
 import utilities.CommonOps;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -65,18 +64,18 @@ public class UIActions extends CommonOps {
     }
 
     @Step("Mouse Hover Element")
-    public static void mouseHover(WebElement element) {
+    public static void hover(WebElement element) {
         action.moveToElement(element).build().perform();
     }
 
     @Step("Mouse Hover Element & sleep")
-    public static void mouseHover(WebElement element, long sleepTimeMillis) {
+    public static void hover(WebElement element, long sleepTimeMillis) {
         action.moveToElement(element).build().perform();
         sleep(sleepTimeMillis);
     }
 
     @Step("Mouse Hover Element & Click")
-    public static void mouseHoverClick(WebElement element) {
+    public static void hoverAndClick(WebElement element) {
         action.moveToElement(element).click().build().perform();
     }
 

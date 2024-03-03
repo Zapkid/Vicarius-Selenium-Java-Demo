@@ -1,9 +1,7 @@
 package pageObjects;
 
 import io.qameta.allure.Step;
-
 import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -65,6 +63,22 @@ public class ProductPage extends BasePage {
         return watchDemo;
     }
 
+    @FindBy(css = ".playing-mode")
+    private WebElement videoPlayingMode;
+
+    @Step("Get Video Playing Mode element")
+    public WebElement getVideoPlayingMode() {
+        return videoPlayingMode;
+    }
+
+    @FindBy(css = ".btn-close")
+    private WebElement videoClose;
+
+    @Step("Get Video Close element")
+    public WebElement getVideoClose() {
+        return videoClose;
+    }
+
     @FindBy(css = ".screen video")
     private WebElement vrxScreenVideo;
 
@@ -92,12 +106,11 @@ public class ProductPage extends BasePage {
     @FindBy(css = "header .links .link-button")
     private List<WebElement> headerLinks;
 
-    @Step("Get Header Links element")
+    @Step("Get Header Links elements")
     public List<WebElement> getHeaderLinks() {
         return headerLinks;
     }
 
-        
     @FindBy(css = ".download h3")
     private WebElement downloadTitle;
 
@@ -112,5 +125,13 @@ public class ProductPage extends BasePage {
     @Step("Get Download PDF Button element")
     public WebElement getDownloadButton() {
         return downloadButton;
+    }
+
+    @FindBy(css = "[id^='particles-container']:not(.particles-mobile)")
+    private List<WebElement> particlesContainer;
+
+    @Step("Get Particles Container elements")
+    public List<WebElement> getParticlesContainer() {
+        return particlesContainer;
     }
 }

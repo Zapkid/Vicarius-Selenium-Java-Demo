@@ -21,7 +21,8 @@ public class WebFlows extends CommonOps {
         UIActions.type(vicariusSignUp.getLastNameInput(), lastName);
         UIActions.type(vicariusSignUp.getEmailInput(), email);
         UIActions.type(vicariusSignUp.getCompanyInput(), company);
-        LOG.info("Signing up user: Name: " + firstName + " " + lastName + ", Email: " + email + ", Company: " + company);
+        LOG.info(
+                "Signing up user: Name: " + firstName + " " + lastName + ", Email: " + email + ", Company: " + company);
 
         UIActions.click(vicariusSignUp.getSubmitButton(), SLEEP_TIMEOUT);
 
@@ -29,7 +30,7 @@ public class WebFlows extends CommonOps {
                 "Let’s Get Started!");
     }
 
-    @Step("Business flow: Close Notification")
+    @Step("Close Notification")
     public static void verifyCloseNotification() {
         Verifications.verifyElementIsVisible(vicariusSignIn.getNotificationClose());
         LOG.info("Closing login notification...");
@@ -38,17 +39,5 @@ public class WebFlows extends CommonOps {
         LOG.info("Login notification closed successfully.");
     }
 
-    @Step("Business flow: Open Chat")
-    public static void openChat() {
-        UIActions.click(vicariusSignIn.getChatWidgetLauncher(), SLEEP_TIMEOUT);
-        Verifications.verifyElementIsVisible(vicariusSignIn.getLiveChatWidget());
-        LOG.info("Chat Widget opened successfully.");
-    }
 
-    @Step("Business flow: Close Chat")
-    public static void closeChat() {
-        UIActions.click(vicariusSignIn.getChatWidgetLauncher(), SLEEP_TIMEOUT);
-        Verifications.verifyElementNotFound("#live-chat-widget");
-        LOG.info("Chat Widget closed successfully.");
-    }
 }

@@ -50,18 +50,18 @@ Screenshots and video recordings of failed tests are also available to help with
 #### Sign In Page Tests:
 * Tests valid, invalid, empty, and unrecognized email sign in flows
 * Verifies sign in error texts, notifications, input field style change
-* Checks elements visibility, text, styles on sign in page
+* Checks elements visibility, text, styles
 * Checks Features and FAQ content
   
 #### Sign Up Page Tests:
 * Tests valid sign up flow including password complexity requirements
 * Verifies sign up error texts, notifications, input field style change
-* Verifies elements visibility, text, styles on sign up page
+* Verifies elements visibility, text, styles
 * Checks Features and FAQ content
 
 #### Product Page Tests:
-* 
-
+* Verify product demo video is played
+* Verify elements visibility & text
 
 #### Overlay Tests:
 * Opens and closes chat widget
@@ -74,6 +74,15 @@ Screenshots and video recordings of failed tests are also available to help with
 * Expand test coverage on Product page
 * **Add E2E test to sign up with a Gmail account, access the verification link with Gmail API & complete a successful sign in.**
   
+#### Bugs found:
+* On Product page, when video is started (can be reproduced):
+1. Cursor blue circle effect can get stuck inside the video player.
+2. Chat widget launcher & welcome message block access to the bottom right corner video player options.
+3. The play Invaders button slightly overlaps with the video player pause button. Gets worse when button is accidentally hovered when trying to hit the pause button.
+
+![Bugs](assets/Bugs%201%202%203.png "Vicarius Product page bugs 1, 2 & 3")
+![Bug 3](assets/Bug%203.png "Vicarius Product page bug 3")
+
 ## Future Improvements
 * Integrate with CI/CD pipeline for automated testing
 * Report summary sent to Slack on a dedicated channel
@@ -97,4 +106,4 @@ Contributions to the project are welcome! To contribute:
 4. Submit a pull request
 
 ### Estimated time worked on the project (hrs):
-~ 20-25 hrs
+~ 25 hrs

@@ -2,7 +2,6 @@ package utilities;
 
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -21,11 +20,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.*;
+import extensions.UIActions;
 import extensions.Verifications;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.sql.Timestamp;
+import java.time.Duration;
 import java.util.Date;
 import java.util.logging.Level;
 
@@ -35,10 +36,15 @@ public class CommonOps extends Base {
 
     // Initiate Parameters from Suite XML
     @BeforeClass
-    @Parameters({ "BrowserName", "URL" })
-    public void startSession(String BrowserName, String URL) {
+    @Parameters({ "BrowserName", "URL", "timeout" })
+    public void startSession(String BrowserName, String URL, String timeout) {
         browserName = BrowserName;
         url = URL;
+        try {
+            timeoutDuration = Duration.ofSeconds(Integer.parseInt(timeout));
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
 
         initWeb();
     }
@@ -127,8 +133,8 @@ public class CommonOps extends Base {
     }
 
     public static void setDriverTimeoutAndWait() {
-        driver.manage().timeouts().implicitlyWait(timeout);
-        wait = new WebDriverWait(driver, timeout);
+        driver.manage().timeouts().implicitlyWait(timeoutDuration);
+        wait = new WebDriverWait(driver, timeoutDuration);
     }
 
     public static void sleep(long millis) {
@@ -147,6 +153,12 @@ public class CommonOps extends Base {
         driver.switchTo().frame(iframe);
     }
 
+    @Step("Switch to default iframe")
+    public static void switchToDefaultIFrame() {
+        driver.switchTo().defaultContent();
+        LOG.info("Switching back to default iframe.");
+    }
+
     @Step("Get element parent")
     public static WebElement getElementParent(WebElement element) {
         return element.findElement(By.xpath("parent::*"));
@@ -155,5 +167,19 @@ public class CommonOps extends Base {
     @Step("Get element following-sibling")
     public static WebElement getElementFollowingSibling(WebElement element) {
         return element.findElement(By.xpath("following-sibling::*"));
+    }
+
+    @Step("Open Chat")
+    public static void openChat() {
+        UIActions.click(vicariusBase.getChatWidgetLauncher(), SLEEP_TIMEOUT);
+        Verifications.verifyElementIsVisible(vicariusBase.getLiveChatWidget());
+        LOG.info("Chat Widget opened successfully.");
+    }
+
+    @Step("Close Chat")
+    public static void closeChat() {
+        UIActions.click(vicariusBase.getChatWidgetLauncher(), SLEEP_TIMEOUT);
+        Verifications.verifyElementNotFound("#live-chat-widget");
+        LOG.info("Chat Widget closed successfully.");
     }
 }

@@ -346,7 +346,7 @@ public class SignUpPageTests extends CommonOps {
                                 SIGN_IN_URL);
 
                 // Trigger hover effect
-                UIActions.mouseHover(vicariusSignUp.getHeaderOptionLink());
+                UIActions.hover(vicariusSignUp.getHeaderOptionLink());
                 // TODO - Add assertion on header option link hover effect
         }
 
