@@ -4,7 +4,7 @@
 # Vicarius.io Selenium Java Testing Demo
 
 ## Introduction
-This project demonstrates UI & functionality testing of the Vicarius.io website using Selenium, TestNG, and Allure frameworks.The project is built using the Page Object Model (POM) design pattern for maintainable and scalable test automation.
+This project demonstrates UI & functionality testing of the Vicarius.io website using Selenium, TestNG, and Allure frameworks. The project is built using the Page Object Model (POM) design pattern for maintainable and scalable test automation.
 
 The framework includes the following layers:
 
@@ -16,9 +16,9 @@ The framework includes the following layers:
 
 * Utilities - Contains helper classes for setup, driver management, listeners etc.
 
-* Workflows - Contains methods to execute common end-to-end user workflows.
+* Workflows - Contains methods to execute common user workflows.
 
-Tests are executed across core user flows like sign up, sign in, and product interactions. The framework verifies UI elements, texts, network calls to validate functionality and business logic.
+Tests are executed across core user flows like sign up, sign in, and product interactions. The framework verifies UI elements, texts & network calls to validate functionality and business logic.
 
 ## Setup
 1. **Prerequisites**: Ensure you have [Java JDK 8+](https://www.oracle.com/il-en/java/technologies/downloads/#jdk21-windows), [Apache Maven 3.6+](https://maven.apache.org/download.cgi) & **Optional** [Allure Report](https://github.com/allure-framework/allure2/releases) properly installed on your machine. Ensure Environment variables are set up for the following:
